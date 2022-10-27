@@ -41,5 +41,11 @@
   }
 }
 
-html {font-size:100%;}
+/* .CS-gradient {
+  
+  background: -webkit-linear-gradient(#14b8a6, #14b8a593, #14b8a58c );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
 
