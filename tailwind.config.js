@@ -25,6 +25,9 @@ module.exports = {
         'chisato': ['CHISATO', 'sans-serif'],
         'blucobra': ['BLUCOBRA', 'sans-serif'],
         'test': ['TEST', 'sans-serif']
+      },
+      backgroundImage: {
+        'collage': "url('./assets/collage.png')"
       }
     },
     colors: ({ colors }) => ({

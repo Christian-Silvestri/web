@@ -1,14 +1,22 @@
 
 
+import { LayoutGroup } from "framer-motion";
 import LogoCS from "./components/LogoCS";
-import Prova from "./Prova";
+import Main from "./components/Main";
+
+import Prova, { Card, Scroll, Test } from "./Prova";
 
 function App() {
   return (
     <>
       <div>
         <LogoCS />
-        {/* <Prova /> */}
+        <Main  />
+        <Main  />
+        <Main  />
+        <Main  />
+       
+       
        
       </div>
     </>

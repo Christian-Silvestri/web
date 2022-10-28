@@ -1,5 +1,5 @@
 import { AnimatePresence, delay, motion } from 'framer-motion';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 /* function Prova() {
   return (
@@ -152,27 +152,161 @@ function Prova() {
   )
 }
 export default Prova; */
+function onComplete() {
+  <h1>CHIAI</h1>
+}
 
 
-function Prova() {
+
+function Prova({ className }) {
+
+  const [open, setOpen] = useState(false);
+
   return (
-    <div className='overflow-x-hidden bg-slate-800 w-screen h-screen flex items-center'>
-      <motion.div  className='text-amber-400 text-9xl font-chisato'>
-        
-          <motion.h1>
-            cHristiaN
-          </motion.h1>
-          <motion.h1>
-            silvestri
-          </motion.h1>
-       
-       
-      
 
-      </motion.div>
-
-    </div>
+    <motion.div
+      layout style={{ height: open ? '500px' : '100px' }}
+      onClick={() => setOpen(!open)}
+      className={`${className}`}
+      transition={{ ease: 'linear', duration: 1 }}
+      onAnimationComplete={onComplete}
+    />
   )
 }
 
+
+export function Test() {
+  const [open, setOpen] = useState(true)
+
+  const anima = {
+    hidden: {
+      opacity: 0
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 2,
+        ease: 'linear'
+      }
+    }, 
+    out: {
+      opacity: 0,
+      transition: {
+        duration: 4,
+        ease: 'linear'
+      },
+      x: 1500
+    }
+  }
+
+  const complete = () => setOpen(!open);
+
+
+
+  return (
+    <AnimatePresence>
+      { open && <motion.div
+
+        initial='hidden'
+        animate='visible'
+        variants={anima}
+        exit='out'
+        onAnimationComplete={complete}
+
+        className='bg-teal-500 h-[100px]'>
+        <h1>CIAMO FVAFSDDFLKN</h1>
+      </motion.div>}
+    </AnimatePresence>
+
+  )
+}
+
+const varia = {
+  hidden: {
+    x: -500,
+    opacity: 0,
+  },
+  visible: {
+    x: [100, 0],
+    opacity: 1,
+    transition: {
+      duration: 2,
+      ease: 'linear',
+      delay: 2
+    }
+  }
+}
+
+export function Scroll() {
+  return (
+    <motion.div 
+    initial={{opacity: 0}}
+    whileInView={{opacity: 1}}
+    viewport={{once: false, amount: 0.5}}
+    transition={{staggerChildren: 1.5}}
+    className='bg-amber-400 h-[1000px]'>
+      <motion.h1
+      initial={{x: -500}}
+      whileInView={{x:[-500, 100, 0]}}
+      >ciao</motion.h1>
+      <motion.h1
+      
+      variants={varia}>ciao</motion.h1>
+      <motion.h1
+      variants={varia}>ciao</motion.h1>
+      <motion.h1
+      variants={varia}>ciao</motion.h1>
+    </motion.div>
+  )
+}
+
+const imgAnimate = {
+  offScreen: {x: -100, opacity: 0},
+  onScreen: {
+    x: 0,
+    opacity: 1,
+    rotate: [0, 90, -90, 90, 0],
+    bounce: 0.4,
+    duration: 3
+  }
+}
+
+const textAnimate = {
+  offScreen: {y: -100, opacity: 0},
+  onScreen: {
+    y: [0, 500, 0],
+    opacity: 1,
+    transition: {type: 'spring'},
+    bounce: 0.4,
+    duration: 3
+  }
+}
+
+export function Card() {
+  return (
+    <motion.div id='franco'
+    transition={{staggerChildren: 0.5}}
+    initial={{opacity: 0}}
+    whileInView={{opacity: 1}}
+    viewport={{once: false, amount: 0.5}}>
+      <motion.div 
+      initial='offScreen'
+      whileInView='onScreen'
+      variants={imgAnimate}
+      >
+        CHRISTIAN
+        </motion.div>
+      <motion.h1
+      variants={textAnimate}
+      initial='offScreen'
+      animate='onScreen'>
+        SILVESTRI
+        </motion.h1>
+      <motion.h1
+      initial='offScreen'
+      animate='onScreen'
+      variants={textAnimate}>paragrafo</motion.h1>
+    </motion.div>
+  )
+}
 export default Prova;
