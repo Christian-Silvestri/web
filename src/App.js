@@ -10,11 +10,9 @@ function App() {
   return (
     <>
       <div>
-        <LogoCS />
+        {/* <LogoCS /> */}
         <Main  />
-        <Main  />
-        <Main  />
-        <Main  />
+       
        
        
        

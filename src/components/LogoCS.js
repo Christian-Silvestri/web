@@ -59,7 +59,7 @@ function LogoCS() {
 
   return (
     /* <AnimatePresence>
-      {show && */ <div className='flex justify-center bg-slate-800 '>
+      {show && */ <div className='flex justify-center bg-black '>
         <div className=' h-screen flex flex-col md:flex-row justify-center md:items-center '>
           <div className=" flex md:items-end flex-col md:flex-row space-y-8 md:space-y-0  " >
             <motion.div className='font-chisato text-teal-500  text-9xl md:text-10xl 2xl:text-11xl'
