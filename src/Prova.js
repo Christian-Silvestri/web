@@ -152,7 +152,15 @@ function Prova() {
   )
 }
 export default Prova; */
-function onComplete() {
+
+
+
+
+
+
+
+
+/* function onComplete() {
   <h1>CHIAI</h1>
 }
 
@@ -309,4 +317,92 @@ export function Card() {
     </motion.div>
   )
 }
-export default Prova;
+export default Prova; */
+
+;
+
+
+
+
+
+
+
+
+
+/*const padding = {
+  sm: 'p-2',
+  md: 'p-4',
+  lg: 'p-8',
+  xl: 'p-12',
+  '2xl': 'p-48'
+};
+
+const colors = {
+  sm: 'text-black',
+  md: 'text-amber-400',
+  lg: 'text-rose-400',
+  xl: 'text-teal-500',
+  '2xl': 'text-blue-500',
+};
+
+function Section({color, size, children}) {
+  let colorClasses = colors[color];
+  let sizeClasses = padding[size];
+
+  return (
+    <div className={`font-black ${sizeClasses} ${colorClasses}`}>
+      {children}
+    </div>
+  )
+}*/
+
+const layout = {
+  padding: 'p-2 sm:p-4 md:p-8 lg:p-12 xl:p-24 2xl:p-48',
+  textSize: 'text-xl sm:text-2xl md:text-4xl lg:text-6xl xl:text-8xl 2xl:text-9xl',
+  backgroundColor: 'bg-black sm:bg-teal-200 md:bg-teal-400 lg:bg-teal-600 xl:bg-teal-800 2xl:bg-teal-900'
+}
+
+function Section({ paddings, textSizes, backgroundColors, children }) {
+
+  let paddingLayout = layout[paddings];
+  let textLayout = layout[textSizes];
+  let backgroundLayout = layout[backgroundColors];
+
+  return (
+    <div>
+      <div className={`${paddingLayout} ${textLayout} ${backgroundLayout}`}>
+        {children}
+      </div>
+    </div>
+  )
+
+
+}
+
+const padding = {
+  sm: 'p-2',
+  md: 'p-4',
+  lg: 'p-8',
+  xl: 'p-12',
+  '2xl': 'p-48'
+};
+
+const colors = {
+  sm: 'text-black',
+  md: 'text-amber-400',
+  lg: 'text-rose-400',
+  xl: 'text-teal-500',
+  '2xl': 'text-blue-500',
+};
+
+function Sectione({ color, size, children }) {
+  let colorClasses = colors[color];
+  let sizeClasses = padding[size];
+
+  return (
+    <div className={`font-black ${sizeClasses} ${colorClasses}`}>
+      {children}
+    </div>
+  )
+}
+

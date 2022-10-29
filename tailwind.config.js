@@ -27,7 +27,8 @@ module.exports = {
         'test': ['TEST', 'sans-serif']
       },
       backgroundImage: {
-        'collage': "url('./assets/collage.png')"
+        'collage': "url('./assets/collage.png')",
+        'webbo': "url('./assets/nasa/web13.jpg')",
       }
     },
     colors: ({ colors }) => ({

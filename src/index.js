@@ -16,7 +16,7 @@ const Wrapper = ({ children }) => {
   return children;
 };
 root.render(
-  <React.StrictMode>
+  
     <BrowserRouter >
       <Wrapper >
         
@@ -24,5 +24,5 @@ root.render(
     
       </Wrapper>
     </BrowserRouter>
-  </React.StrictMode>
+  
 );
