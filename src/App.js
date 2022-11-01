@@ -1,5 +1,6 @@
 import LogoCS from "./components/LogoCS";
 import Main from "./components/Main";
+import FramerMotionTest from "./FramerMotionTest";
 
 
 
@@ -11,10 +12,12 @@ function App() {
       <div>
         <LogoCS />
         <Main />
+        {/* <FramerMotionTest /> */}
+        
       </div>
     </>
 
-  );
+	);
 }
 
 

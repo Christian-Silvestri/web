@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { configuration } from '../config';
+import Skills from './Skills';
 
 
 
@@ -7,14 +8,12 @@ function HeroCard({ config, style, animation }) {
 	return (
 		<div className='py-36'>
 			<motion.div initial={'hidden'} whileInView={'visible'} viewport={{ once: false, amount: 0.9 }} transition={{ staggerChildren: 0.5 }}>
-				<motion.h1 variants={animation.title} className={`${style.fontTitle} ${style.textColorTitle} ${style.textSizeTitle} ${config.titleAlign} 
-				font-black uppercase`}>
+				<motion.h1 variants={animation.title} className={`${style.title}`}>
 					{config.title}
 				</motion.h1>
 			</motion.div>
 			<motion.div initial={'hidden'} whileInView={'visible'} viewport={{ once: false, amount: 0.9 }} transition={{ staggerChildren: 0.5 }} >
-				<motion.h1 variants={animation.para} className={`${style.textColorPara} ${style.textSizePara} ${style.fontPara} ${config.paraAlign} ${config.paraWidht} ${config.float} 
-				leading-none font-black uppercase`} >
+				<motion.h1 variants={animation.para} className={`${style.para}`} >
 					{config.para()}
 				</motion.h1>
 			</motion.div >
@@ -29,10 +28,7 @@ function Main() {
 			<div>
 				<HeroCard config={configuration.about} style={configuration.style} animation={configuration.animation} />
 				<HeroCard config={configuration.career} style={configuration.style} animation={configuration.animation} />
-				<HeroCard config={configuration.about} style={configuration.style} animation={configuration.animation} />
-				<HeroCard config={configuration.career} style={configuration.style} animation={configuration.animation} />
-				<HeroCard config={configuration.about} style={configuration.style} animation={configuration.animation} />
-				<HeroCard config={configuration.career} style={configuration.style} animation={configuration.animation} />
+				<Skills config={configuration.skills} style={configuration.style} animation={configuration.animation}/>
 			</div>
 		</div>
 	)

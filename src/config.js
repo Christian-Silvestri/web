@@ -1,10 +1,11 @@
+
+
 export const configuration = {
+	skills: {
+		title: 'skills',
+	},
 	about: {
 		title: 'hello, i am christian',
-		titleAling: '',
-		paraAlign: '',
-    paraWidht: '',
-    float: '',
 		para: function () {
 			return (
 				<>
@@ -21,10 +22,6 @@ export const configuration = {
 	},
 	career: {
 		title: 'career objective',
-		titleAlign: 'text-right',
-		paraAlign: 'text-right',
-    paraWidht: '',
-    float: '',
 		para: function () {
 			return (
 				<>
@@ -40,12 +37,8 @@ export const configuration = {
 		}
 	},
 	style: {
-		fontTitle: 'font-blucobra',
-		textColorTitle: 'text-amber-500',
-		textSizeTitle: 'text-7xl',
-		fontPara: 'font-para',
-		textColorPara: 'text-white',
-		textSizePara: 'text-xl',
+		title: 'font-blucobra text-amber-500 text-9xl xl:text-10xl font-black uppercase',
+		para: 'font-para text-white text-xl lg:text-2xl xl:text-4xl leading-none font-black uppercase',
 	},
 	animation: {
 		title: {
@@ -63,7 +56,7 @@ export const configuration = {
 			visible: {
 				opacity: 1,
 				transition: {
-					duration: 3,
+					duration: 5,
 					ease: 'linear'
 				}
 			}
