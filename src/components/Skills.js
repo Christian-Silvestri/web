@@ -10,7 +10,7 @@ import {
 
 
 function Skills() {
-
+ 
   const { Title } = Section();
   const icon = [
     {
@@ -163,13 +163,13 @@ function Skills() {
           skills
         </Title>
       </div>
-      <div className='columns-2 space-y-4'>
-        <LayoutGroup>
+      <motion.div className='columns-1 space-y-4'>
+        <LayoutGroup >
           {icon.map((value) => {
-            return <SkillCard name={value.name} content={value.content} icon={value.icon(iconSize, iconStyle)} key={value.id} />
+            return <SkillCard name={value.name} content={value.content} icon={value.icon(iconSize, iconStyle)} key={value.id}  />
           })}
         </LayoutGroup>
-      </div>
+      </motion.div>
     </div>
   )
 }
