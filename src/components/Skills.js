@@ -1,5 +1,6 @@
-import { motion } from 'framer-motion';
-import React from 'react';
+import { LayoutGroup, motion } from 'framer-motion';
+import React, { useState } from 'react';
+import Section from './Section';
 import {
   SiJavascript, SiTypescript, SiHtml5, SiCss3,
   SiSass, SiReact, SiFlutter, SiMongodb, SiPostgresql, SiPrisma, SiExpress, SiNpm,
@@ -8,160 +9,187 @@ import {
 } from 'react-icons/si';
 
 
-const iconsArray = [
-  {
-    id: 1,
-    name: 'html 5',
-    icon: (size, style) => <SiHtml5 className={`${size} ${style}`} />,
-  },
-  {
-    id: 2,
-    name: 'css 3',
-    icon: (size, style) => <SiCss3 className={`${size} ${style}`} />,
-  },
-  {
-    id: 3,
-    name: 'sass',
-    icon: (size, style) => <SiSass className={`${size} ${style}`} />
-  },
-  {
-    id: 4,
-    name: 'javasccript',
-    icon: (size, style) => <SiJavascript className={`${size} ${style}`} />,
-  },
-  {
-    id: 5,
-    name: 'typescript',
-    icon: (size, style) => <SiTypescript className={`${size} ${style}`} />,
-  },
-  {
-    id: 6,
-    name: 'react',
-    icon: (size, style) => <SiReact className={`${size} ${style}`} />,
-  },
-  {
-    id: 7,
-    name: 'flutter',
-    icon: (size, style) => <SiFlutter className={`${size} ${style}`} />,
-  },
-  {
-    id: 8,
-    name: 'nodejs',
-    icon: (size, style) => <SiNodedotjs className={`${size} ${style}`} />,
-  },
-  {
-    id: 9,
-    name: 'npm',
-    icon: (size, style) => <SiNpm className={`${size} ${style}`} />,
-  },
-  {
-    id: 10,
-    name: 'git',
-    icon: (size, style) => <SiGit className={`${size} ${style}`} />,
-  },
-  {
-    id: 11,
-    name: 'webpack',
-    icon: (size, style) => <SiWebpack className={`${size} ${style}`} />,
-  },
-  {
-    id: 12,
-    name: 'express',
-    icon: (size, style) => <SiExpress className={`${size} ${style}`} />,
-  },
-  {
-    id: 13,
-    name: 'prisma',
-    icon: (size, style) => <SiPrisma className={`${size} ${style}`} />,
-  },
-  {
-    id: 14,
-    name: 'mongodb',
-    icon: (size, style) => <SiMongodb className={`${size} ${style}`} />,
-  },
-  {
-    id: 15,
-    name: 'postgresql',
-    icon: (size, style) => <SiPostgresql className={`${size} ${style}`} />,
-  },
-  {
-    id: 16,
-    name: 'tailwind',
-    icon: (size, style) => <SiTailwindcss className={`${size} ${style}`} />,
-  },
-  {
-    id: 17,
-    name: 'bootstrap',
-    icon: (size, style) => <SiBootstrap className={`${size} ${style}`} />,
-  },
-  {
-    id: 18,
-    name: 'figma',
-    icon: (size, style) => <SiFigma className={`${size} ${style}`} />,
-  },
-  {
-    id: 19,
-    name: 'adobe photoshop',
-    icon: (size, style) => <SiAdobephotoshop className={`${size} ${style}`} />,
-  },
-  {
-    id: 20,
-    name: 'github',
-    icon: (size, style) => <SiGithub className={`${size} ${style}`} />,
-  },
-  {
-    id: 21,
-    name: 'trello',
-    icon: (size, style) => <SiTrello className={`${size} ${style}`} />,
-  },
-  {
-    id: 22,
-    name: 'framer motion',
-    icon: (size, style) => <SiFramer className={`${size} ${style}`} />,
-  }
-]
+function Skills() {
 
-function Skills({ config, style, animation }) {
+  const { Title } = Section();
+  const icon = [
+    {
+      id: 1,
+      name: 'html',
+      content: `(HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. 
+      Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript)`,
+      icon: (style, ...args) => <SiHtml5 className={`${style} ${args}`} />
+    },
+    {
+      id: 2,
+      name: 'css',
+      content: `Cascading Style Sheets Level 3 (CSS3) is the iteration of the CSS standard used in the styling and formatting of Web pages. 
+      CSS3 incorporates the CSS2 standard with some changes and improvements. A key change is the division of standard into separate modules, which makes it easier to learn and understand`,
+      icon: (style, ...args) => <SiCss3 className={`${style} ${args}`} />
+    },
+    {
+      id: 3,
+      name: 'sass',
+      content: `Sass is a CSS preprocessor, which adds special features such as variables, nested rules and mixins (sometimes referred to as syntactic sugar) into regular CSS. 
+      The aim is to make the coding process simpler and more efficient. Let's explore in more detail`,
+      icon: (style, ...args) => <SiSass className={`${style} ${args}`} />
+    },
+    {
+      id: 4,
+      name: 'javascript',
+      content: `JavaScript (often shortened to JS) is a lightweight, interpreted, object-oriented language with first-class functions, and is best known as the 
+      scripting language for Web pages, but it's used in many non-browser environments as well`,
+      icon: (style, ...args) => <SiJavascript className={`${style} ${args}`} />
+    },
+    {
+      id: 5,
+      name: 'typescript',
+      content: `TypeScript is a free and open source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing 
+      to the language. It is designed for the development of large applications and transpiles to JavaScript`,
+      icon: (style, ...args) => <SiTypescript className={`${style} ${args}`} />
+    },
+    {
+      id: 6,
+      name: 'react',
+      content: '',
+      icon: (style, ...args) => <SiReact className={`${style} ${args}`} />,
+    },
+    {
+      id: 7,
+      name: 'flutter',
+      content: '',
+      icon: (style, ...args) => <SiFlutter className={`${style} ${args}`} />,
+    },
+    {
+      id: 8,
+      name: 'nodejs',
+      content: '',
+      icon: (style, ...args) => <SiNodedotjs className={`${style} ${args}`} />,
+    },
+    {
+      id: 9,
+      name: 'npm',
+      content: '',
+      icon: (style, ...args) => <SiNpm className={`${style} ${args}`} />,
+    },
+    {
+      id: 10,
+      name: 'git',
+      content: '',
+      icon: (style, ...args) => <SiGit className={`${style} ${args}`} />,
+    },
+    {
+      id: 11,
+      name: 'webpack',
+      content: '',
+      icon: (style, ...args) => <SiWebpack className={`${style} ${args}`} />,
+    },
+    {
+      id: 12,
+      name: 'express',
+      content: '',
+      icon: (style, ...args) => <SiExpress className={`${style} ${args}`} />,
+    },
+    {
+      id: 13,
+      name: 'prisma',
+      content: '',
+      icon: (style, ...args) => <SiPrisma className={`${style} ${args}`} />,
+    },
+    {
+      id: 14,
+      name: 'mongodb',
+      content: '',
+      icon: (style, ...args) => <SiMongodb className={`${style} ${args}`} />,
+    },
+    {
+      id: 15,
+      name: 'postgresql',
+      content: '',
+      icon: (style, ...args) => <SiPostgresql className={`${style} ${args}`} />,
+    },
+    {
+      id: 16,
+      name: 'tailwind',
+      content: '',
+      icon: (style, ...args) => <SiTailwindcss className={`${style} ${args}`} />,
+    },
+    {
+      id: 17,
+      name: 'bootstrap',
+      content: '',
+      icon: (style, ...args) => <SiBootstrap className={`${style} ${args}`} />,
+    },
+    {
+      id: 18,
+      name: 'figma',
+      content: '',
+      icon: (style, ...args) => <SiFigma className={`${style} ${args}`} />,
+    },
+    {
+      id: 19,
+      name: 'adobe photoshop',
+      content: '',
+      icon: (style, ...args) => <SiAdobephotoshop className={`${style} ${args}`} />,
+    },
+    {
+      id: 20,
+      name: 'github',
+      content: '',
+      icon: (style, ...args) => <SiGithub className={`${style} ${args}`} />,
+    },
+    {
+      id: 21,
+      name: 'trello',
+      content: '',
+      icon: (style, ...args) => <SiTrello className={`${style} ${args}`} />,
+    },
+    {
+      id: 22,
+      name: 'framer motion',
+      content: '',
+      icon: (style, ...args) => <SiFramer className={`${style} ${args}`} />,
+    }
+  ];
+
+  const iconStyle = 'text-amber-400';
+  const iconSize = 'w-[60px] h-[60px] xl:w-[120px] xl:h-[120px]';
+
+
   return (
-    <div className=''>
-      <div className=''>
-        <motion.div className={`${style.title} `} initial='hidden' whileInView='visible' viewport={{ once: false, amount: 0.9 }} transition={{ staggerChildren: 0.5 }}>
-          <motion.h1 variants={animation.title}>
-            {config.title}
-          </motion.h1>
-        </motion.div>
-        <div className=' '>
-          <IconSkills  />
-        </div>
+    <div>
+      <div>
+        <Title>
+          skills
+        </Title>
+      </div>
+      <div className='columns-2 space-y-4'>
+        <LayoutGroup>
+          {icon.map((value) => {
+            return <SkillCard name={value.name} content={value.content} icon={value.icon(iconSize, iconStyle)} key={value.id} />
+          })}
+        </LayoutGroup>
       </div>
     </div>
   )
 }
 
 
-function IconSkills() {
 
-  const iconStyle = 'text-teal-100';
-  const iconSize = 'w-[60px] h-[60px] xl:w-[120px] xl:h-[120px]';
+function SkillCard(props) {
+  const [open, setOpen] = useState(false);
   const textStyle = 'text-white font-para';
-  const textSize = 'uppercase text-xl';
-  const button = ' bg-zinc-800/70 rounded-2xl   py-2';
- 
+  const textSize = 'uppercase text-2xl leading-none';
+  const button = ' bg-zinc-800/70 rounded-2xl py-2 border-gray-400 border-2';
+
   return (
-    <div className='columns-2 space-y-4'>
-      {iconsArray.map((language) => {
-        return (
-          <div className={`flex items-center flex-col ${button}`}>
-            <span key={language.id}>
-              {language.icon(iconSize, iconStyle)}
-            </span>
-            <h1 className={`${textStyle} ${textSize}`}>
-              {language.name}
-            </h1>
-          </div>
-        )
-      })}
-    </div>
+    <motion.div layout onClick={() => setOpen(!open)} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, ease: 'linear', type: 'spring' }} className={`flex items-center gap-8 px-4 ${button} ${open ? 'flex-col' : 'flex-row'}`}>
+      <motion.div layout className='' >
+        {props.icon}
+      </motion.div>
+      {!open && <h1 className={`${textSize} ${textStyle}`}>{props.name}</h1>}
+      {open ? <h1 className='text-white uppercase text-xl leading-none'>{props.content}</h1> : null}
+    </motion.div>
   )
 }
 
