@@ -38,7 +38,7 @@ function ButtonSkill(props) {
   const Name = () => {
     const textShadow = { textShadow: '2px 2px 1px  gray' }
     return (
-      <div className={`w-full flex justify-center`}>
+      <div className={`${show && 'hidden'} w-full flex justify-center`}>
         <h1 style={textShadow} className={`text-xl font-para font-black text-gray-300 uppercase`}>
           {props.name}
         </h1>
@@ -47,8 +47,8 @@ function ButtonSkill(props) {
   }
   //Content container
   const Content = () => (
-    <div className={`${!show && 'hidden'} px-2 pb-2 `}>
-      <h1 className='text-gray-300/70 font-para text-sm leading-4  '>
+    <div className={`${!show && 'hidden'} px-4 pb-4  `}>
+      <h1 className='text-gray-300/70 font-para text-lg leading-5  '>
         {props.content}
       </h1>
     </div>
@@ -59,16 +59,16 @@ function ButtonSkill(props) {
 
   //styiling border for button
   const borderStyle = {
-    borderWidth: '1px',
+    borderWidth: '0px',
     borderStyle: 'solid',
-    borderRadius: '16px',
-    borderColor: 'orange',
-    boxShadow: '2px 2px 5px 1px darkorange',
+    borderRadius: '10px',
+    borderColor: 'white',
+    boxShadow: '0px 0px 5px 1px white',
   }
 
   return (
     <div style={borderStyle} className={` text-amber-400`} onClick={handleShowChange}>
-      <div className='w-full flex items-center pl-4 pr-8 py-1   '>
+      <div className={`${show && 'justify-between'} w-full flex items-center pl-4 pr-8 py-2`}>
         <Icon />
         <Name />
         <CaretDown />
@@ -221,7 +221,7 @@ function ButtonSkillContainer() {
   ];
 
   return (
-    <div className='columns-1 space-y-3'>
+    <div className='columns-1 space-y-5'>
       {icon.map((icon) => <ButtonSkill icon={icon.icon} name={icon.name} content={icon.content} key={icon.id} />)}
     </div>
   )
