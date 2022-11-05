@@ -7,192 +7,232 @@ import {
   SiNodedotjs, SiGit, SiTailwindcss, SiBootstrap, SiWebpack, SiGithub, SiTrello,
   SiFigma, SiAdobephotoshop, SiFramer
 } from 'react-icons/si';
+import { BsCaretDown } from 'react-icons/bs';
 
 
 function Skills() {
- 
-  const { Title } = Section();
+
+  return (
+    <>
+      <ButtonSkillContainer />
+    </>
+  )
+}
+
+
+
+
+
+function ButtonSkill(props) {
+  //CREATE COMPONENT FOR SHOW SKILLS LIKE BUTTON
+  //Set a state variable and method for button state.
+  //if SHOW is true the button will show the desription of content  
+  const [show, setShow] = useState(false);
+  const handleShowChange = () => setShow(!show);
+
+
+  //LOW-ORDER COMPONENT
+  //Icon container
+  const Icon = () => <span className='text-4xl'>{props.icon}</span>;
+  //Name container
+  const Name = () => {
+    const textShadow = { textShadow: '2px 2px 1px  gray' }
+    return (
+      <div className={`w-full flex justify-center`}>
+        <h1 style={textShadow} className={`text-xl font-para font-black text-gray-300 uppercase`}>
+          {props.name}
+        </h1>
+      </div>
+    )
+  }
+  //Content container
+  const Content = () => (
+    <div className={`${!show && 'hidden'} px-2 pb-2 `}>
+      <h1 className='text-gray-300/70 font-para text-sm leading-4  '>
+        {props.content}
+      </h1>
+    </div>
+  )
+  //Caret-down
+  const CaretDown = () => <BsCaretDown size={30} className={`${show && 'rotate-180'} w-[5%]`} />
+
+
+  //styiling border for button
+  const borderStyle = {
+    borderWidth: '1px',
+    borderStyle: 'solid',
+    borderRadius: '16px',
+    borderColor: 'orange',
+    boxShadow: '2px 2px 5px 1px darkorange',
+  }
+
+  return (
+    <div style={borderStyle} className={` text-amber-400`} onClick={handleShowChange}>
+      <div className='w-full flex items-center pl-4 pr-8 py-1   '>
+        <Icon />
+        <Name />
+        <CaretDown />
+      </div>
+      <Content />
+    </div>
+  )
+}
+
+//Mapping the icon array 
+function ButtonSkillContainer() {
   const icon = [
     {
       id: 1,
       name: 'html',
       content: `(HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. 
       Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript)`,
-      icon: (style, ...args) => <SiHtml5 className={`${style} ${args}`} />
+      icon: <SiHtml5 />
     },
     {
       id: 2,
       name: 'css',
       content: `Cascading Style Sheets Level 3 (CSS3) is the iteration of the CSS standard used in the styling and formatting of Web pages. 
       CSS3 incorporates the CSS2 standard with some changes and improvements. A key change is the division of standard into separate modules, which makes it easier to learn and understand`,
-      icon: (style, ...args) => <SiCss3 className={`${style} ${args}`} />
+      icon: <SiCss3 />
     },
     {
       id: 3,
       name: 'sass',
       content: `Sass is a CSS preprocessor, which adds special features such as variables, nested rules and mixins (sometimes referred to as syntactic sugar) into regular CSS. 
       The aim is to make the coding process simpler and more efficient. Let's explore in more detail`,
-      icon: (style, ...args) => <SiSass className={`${style} ${args}`} />
+      icon: <SiSass />
     },
     {
       id: 4,
       name: 'javascript',
       content: `JavaScript (often shortened to JS) is a lightweight, interpreted, object-oriented language with first-class functions, and is best known as the 
       scripting language for Web pages, but it's used in many non-browser environments as well`,
-      icon: (style, ...args) => <SiJavascript className={`${style} ${args}`} />
+      icon: <SiJavascript />
     },
     {
       id: 5,
       name: 'typescript',
       content: `TypeScript is a free and open source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing 
       to the language. It is designed for the development of large applications and transpiles to JavaScript`,
-      icon: (style, ...args) => <SiTypescript className={`${style} ${args}`} />
+      icon: <SiTypescript />
     },
     {
       id: 6,
       name: 'react',
       content: '',
-      icon: (style, ...args) => <SiReact className={`${style} ${args}`} />,
+      icon: <SiReact />,
     },
     {
       id: 7,
       name: 'flutter',
       content: '',
-      icon: (style, ...args) => <SiFlutter className={`${style} ${args}`} />,
+      icon: <SiFlutter />,
     },
     {
       id: 8,
       name: 'nodejs',
       content: '',
-      icon: (style, ...args) => <SiNodedotjs className={`${style} ${args}`} />,
+      icon: <SiNodedotjs />,
     },
     {
       id: 9,
       name: 'npm',
       content: '',
-      icon: (style, ...args) => <SiNpm className={`${style} ${args}`} />,
+      icon: <SiNpm />,
     },
     {
       id: 10,
       name: 'git',
       content: '',
-      icon: (style, ...args) => <SiGit className={`${style} ${args}`} />,
+      icon: <SiGit />,
     },
     {
       id: 11,
       name: 'webpack',
       content: '',
-      icon: (style, ...args) => <SiWebpack className={`${style} ${args}`} />,
+      icon: <SiWebpack />,
     },
     {
       id: 12,
       name: 'express',
       content: '',
-      icon: (style, ...args) => <SiExpress className={`${style} ${args}`} />,
+      icon: <SiExpress />,
     },
     {
       id: 13,
       name: 'prisma',
       content: '',
-      icon: (style, ...args) => <SiPrisma className={`${style} ${args}`} />,
+      icon: <SiPrisma />,
     },
     {
       id: 14,
       name: 'mongodb',
       content: '',
-      icon: (style, ...args) => <SiMongodb className={`${style} ${args}`} />,
+      icon: <SiMongodb />,
     },
     {
       id: 15,
       name: 'postgresql',
       content: '',
-      icon: (style, ...args) => <SiPostgresql className={`${style} ${args}`} />,
+      icon: <SiPostgresql />,
     },
     {
       id: 16,
       name: 'tailwind',
       content: '',
-      icon: (style, ...args) => <SiTailwindcss className={`${style} ${args}`} />,
+      icon: <SiTailwindcss />,
     },
     {
       id: 17,
       name: 'bootstrap',
       content: '',
-      icon: (style, ...args) => <SiBootstrap className={`${style} ${args}`} />,
+      icon: <SiBootstrap />,
     },
     {
       id: 18,
       name: 'figma',
       content: '',
-      icon: (style, ...args) => <SiFigma className={`${style} ${args}`} />,
+      icon: <SiFigma />,
     },
     {
       id: 19,
-      name: 'adobe photoshop',
+      name: 'photoshop',
       content: '',
-      icon: (style, ...args) => <SiAdobephotoshop className={`${style} ${args}`} />,
+      icon: <SiAdobephotoshop />,
     },
     {
       id: 20,
       name: 'github',
       content: '',
-      icon: (style, ...args) => <SiGithub className={`${style} ${args}`} />,
+      icon: <SiGithub />,
     },
     {
       id: 21,
       name: 'trello',
       content: '',
-      icon: (style, ...args) => <SiTrello className={`${style} ${args}`} />,
+      icon: <SiTrello />,
     },
     {
       id: 22,
       name: 'framer motion',
       content: '',
-      icon: (style, ...args) => <SiFramer className={`${style} ${args}`} />,
+      icon: <SiFramer />,
     }
   ];
 
-  const iconStyle = 'text-amber-400';
-  const iconSize = 'w-[60px] h-[60px] xl:w-[120px] xl:h-[120px]';
-
-
   return (
-    <div>
-      <div>
-        <Title>
-          skills
-        </Title>
-      </div>
-      <motion.div className='columns-1 space-y-4'>
-        <LayoutGroup >
-          {icon.map((value) => {
-            return <SkillCard name={value.name} content={value.content} icon={value.icon(iconSize, iconStyle)} key={value.id}  />
-          })}
-        </LayoutGroup>
-      </motion.div>
+    <div className='columns-1 space-y-3'>
+      {icon.map((icon) => <ButtonSkill icon={icon.icon} name={icon.name} content={icon.content} key={icon.id} />)}
     </div>
   )
 }
 
 
 
-function SkillCard(props) {
-  const [open, setOpen] = useState(false);
-  const textStyle = 'text-white font-para';
-  const textSize = 'uppercase text-2xl leading-none';
-  const button = ' bg-zinc-800/70 rounded-2xl py-2 border-gray-400 border-2';
-
-  return (
-    <motion.div layout onClick={() => setOpen(!open)} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, ease: 'linear', type: 'spring' }} className={`flex items-center gap-8 px-4 ${button} ${open ? 'flex-col' : 'flex-row'}`}>
-      <motion.div layout className='' >
-        {props.icon}
-      </motion.div>
-      {!open && <h1 className={`${textSize} ${textStyle}`}>{props.name}</h1>}
-      {open ? <h1 className='text-white uppercase text-xl leading-none'>{props.content}</h1> : null}
-    </motion.div>
-  )
-}
-
-
 export default Skills;
+
+
+
+
+
 

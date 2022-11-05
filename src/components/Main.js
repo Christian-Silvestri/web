@@ -11,7 +11,7 @@ function Main() {
 		<Layout>
 			<div className='h-full'>
 			
-				<LogoCS/>
+				{/* <LogoCS/> */}
 				<Skills  />
 			</div>
 		</Layout>

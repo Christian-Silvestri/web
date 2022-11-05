@@ -1,5 +1,5 @@
-import { AnimatePresence, delay, motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { AnimatePresence, delay, filterProps, motion } from 'framer-motion';
+import { createRef, useEffect, useReducer, useState, React } from 'react';
 
 /* function Prova() {
   return (
@@ -356,7 +356,7 @@ function Section({color, size, children}) {
   )
 }*/
 
-const layout = {
+/* const layout = {
   padding: 'p-2 sm:p-4 md:p-8 lg:p-12 xl:p-24 2xl:p-48',
   textSize: 'text-xl sm:text-2xl md:text-4xl lg:text-6xl xl:text-8xl 2xl:text-9xl',
   backgroundColor: 'bg-black sm:bg-teal-200 md:bg-teal-400 lg:bg-teal-600 xl:bg-teal-800 2xl:bg-teal-900'
@@ -377,9 +377,9 @@ function Section({ paddings, textSizes, backgroundColors, children }) {
   )
 
 
-}
+} */
 
-const padding = {
+/* const padding = {
   sm: 'p-2',
   md: 'p-4',
   lg: 'p-8',
@@ -404,5 +404,60 @@ function Sectione({ color, size, children }) {
       {children}
     </div>
   )
+} */
+
+
+
+
+
+function Prova() {
+  return (
+    <div>
+     
+
+    </div>
+  )
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export default Prova;
