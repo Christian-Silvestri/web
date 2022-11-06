@@ -13,6 +13,8 @@ import { CgTrello } from 'react-icons/cg';
 import { ImLoop2 } from 'react-icons/im';
 
 
+
+
 function Skills() {
 
   return (
@@ -24,14 +26,68 @@ function Skills() {
   )
 }
 
+
+
+
+
+function Button(props) {
+
+  const [show, setShow] = useState(false);
+  const handleShow = () => setShow(!show);
+
+  const style = {
+    icon: {
+      text: 'text-rose-500/90',
+    },
+    name: {
+      text: 'text-2xl text-center uppercase text-gray-200 font-para',
+      shadow: {textShadow: '2px 2px 2px gray'}
+    },
+    content: {
+      text: 'text-lg text-blue-100/70 leading-none font-para'
+    },
+    button: 'bg-zinc-700/40  border-l border-gray-600 rounded-lg shadow-md shadow-gray-500',
+    caret: 'text-gray-400 '
+  }
+
+  return (
+    <div onClick={handleShow} className={`${show && 'flex-col'} ${style.button} px-4 py-2 flex`}>
+      <div className='w-full flex items-center'>
+        <span className={`${style.icon.text} grow-[1]`} >
+          {props.icon}
+        </span>
+        <span className={`${style.name.text} grow-[3] w-full`} style={style.name.shadow}>
+          {props.name}
+        </span>
+        <span className={` ${style.caret} grow-[1]`} >
+          <BsCaretDown size={20} className={`${show && 'rotate-180'}`} />
+        </span>
+      </div>
+      <span className={`${show ? 'visible' : 'hidden'} ${style.content.text} py-4 w-full`}>
+        {props.content}
+        <br />
+       <h1 className='uppercase text-right pt-4 text-sm text-rose-500/70 font-bold'>{props.link}</h1>
+      </span>
+    </div>
+  )
+}
+
+
+
+
 function SkillsList() {
   const icon = [
     {
       id: 1,
       name: 'html',
-      content: `(HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. 
-      Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript)`,
-      icon: <TbBrandHtml5 size={35} />
+      content: `HyperText Markup Language is the code that is used to structure a web page and its content. For example, content could be 
+      structured within a set of paragraphs, a list of bulleted points, or using images and data tables. As the title suggests, this article 
+      will give you a basic understanding of HTML and its functions.
+      HTML is a markup language that defines the structure of your content. HTML consists of a series of elements, which you use to enclose, 
+      or wrap, different parts of the content to make it appear a certain way, or act a certain way. The enclosing tags can make a word or 
+      image hyperlink to somewhere else, can italicize words, can make the font bigger or smaller, and so on.`,
+      icon: <TbBrandHtml5 size={35} />,
+      link: <a href='https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics' alt='html home page'>view more</a>
     },
     {
       id: 2,
@@ -173,48 +229,8 @@ function SkillsList() {
   ];
   return (
     <>
-      {icon.map((icon) => <Button icon={icon.icon} name={icon.name} content={icon.content} key={icon.id} />)}
+      {icon.map((icon) => <Button icon={icon.icon} name={icon.name} content={icon.content} link={icon.link} key={icon.id} />)}
     </>
-  )
-}
-
-function Button(props) {
-
-  const [show, setShow] = useState(false);
-  const handleShow = () => setShow(!show);
-
-  const style = {
-    icon: {
-      text: 'text-rose-500/90',
-    },
-    name: {
-      text: 'text-2xl text-center uppercase text-gray-200 font-para',
-      shadow: {textShadow: '2px 2px 2px gray'}
-    },
-    content: {
-      text: 'text-lg text-blue-100/70 leading-none font-para'
-    },
-    button: 'bg-zinc-700/40  border-l border-gray-600 rounded-lg shadow-md shadow-gray-500',
-    caret: 'text-gray-400 '
-  }
-
-  return (
-    <div onClick={handleShow} className={`${show && 'flex-col'} ${style.button} px-4 py-2 flex`}>
-      <div className='w-full flex items-center'>
-        <span className={`${style.icon.text} grow-[1]`} >
-          {props.icon}
-        </span>
-        <span className={`${style.name.text} grow-[3] w-full`} style={style.name.shadow}>
-          {props.name}
-        </span>
-        <span className={` ${style.caret} grow-[1]`} >
-          <BsCaretDown size={20} className={`${show && 'rotate-180'}`} />
-        </span>
-      </div>
-      <span className={`${show ? 'visible' : 'hidden'} ${style.content.text} py-4 `}>
-        {props.content}
-      </span>
-    </div>
   )
 }
 
