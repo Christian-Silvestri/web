@@ -16,7 +16,7 @@ function App() {
     <>
       <div>
 
-        <Prova />
+        {/* <Prova /> */}
         <Skills />
 
         {/* <LogoCS /> */}

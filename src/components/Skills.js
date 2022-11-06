@@ -1,269 +1,222 @@
 import { LayoutGroup, motion } from 'framer-motion';
 import React, { useState } from 'react';
-import Section from './Section';
-import {
-  SiJavascript, SiTypescript, SiHtml5, SiCss3,
-  SiSass, SiReact, SiFlutter, SiMongodb, SiPostgresql, SiPrisma, SiExpress, SiNpm,
-  SiNodedotjs, SiGit, SiTailwindcss, SiBootstrap, SiWebpack, SiGithub, SiTrello,
-  SiFigma, SiAdobephotoshop, SiFramer
+import { 
+  SiReact, SiFlutter, SiMongodb, SiPostgresql, SiPrisma, SiExpress, 
+  SiNodedotjs, SiTailwindcss, SiWebpack, SiFigma, SiFramer
 } from 'react-icons/si';
 import { BsCaretDown } from 'react-icons/bs';
+import { TbBrandCss3, TbBrandGit, TbBrandBootstrap, TbBrandHtml5 } from 'react-icons/tb';
+import { FaSass } from 'react-icons/fa';
+import { IoLogoNpm } from 'react-icons/io';
+import { VscGithub } from 'react-icons/vsc';
+import { CgTrello } from 'react-icons/cg';
+import { ImLoop2 } from 'react-icons/im';
 
 
 function Skills() {
 
   return (
     <>
-    <div>
-      <ButtonSkillContainer />
+    <div className='bg-zinc-900 space-y-3 p-2'>
+      <SkillsList />
       </div>
     </>
   )
 }
 
-
-
-
-
-function ButtonSkill(props) {
-
-  const [show, setShow] = useState(false);
-  const handleShowChange = () => setShow(!show);
-
-
-
-
-
-
-
-  //LOW-ORDER COMPONENT
-
-  const Icon = () => (
-    <span className='text-4xl'>{props.icon}</span>
-  );
-
-
-  const Name = () => {
-    const textShadow = { textShadow: '2px 2px 1px  gray' }
-    return (
-      <div className={`${show && 'hidden'} w-full flex justify-center`}>
-        <h1 style={textShadow} className={`text-xl font-para font-black text-gray-300 uppercase`}>
-          {props.name}
-        </h1>
-      </div>
-    )
-  };
-
-
-  const Content = () => (
-    <motion.div initial='hidden' animate='visible'  variants={animation} className={`${!show && 'hidden'} px-4 pb-4  `}>
-      <motion.h1 className='text-gray-300/70 font-para text-lg leading-5  '>
-        {props.content}
-      </motion.h1>
-    </motion.div>
-  );
-
-
-  const CaretDown = () => (
-    <BsCaretDown size={30} className={`${show && 'rotate-180'} w-[5%]`} />
-  );
-
-
-
-
-
-
-  //styiling border for button
-  const borderStyle = {
-    borderWidth: '0px',
-    borderStyle: 'solid',
-    borderRadius: '10px',
-    borderColor: 'white',
-    boxShadow: '0px 0px 5px 1px white',
-  }
-
-  const animation = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.3,
-        ease: 'linear',
-      }
-    },
-    exit: {
-      opacity: 0,
-      transition: {
-        duration: 0.9,
-        ease: 'linear',
-      }
-    }
-  }
-
-  return (
-    <div style={borderStyle} className={` text-amber-400`} onClick={handleShowChange}>
-      <div className={`${show && 'justify-between'} w-full flex items-center pl-4 pr-8 py-2`}>
-        <Icon />
-        <Name />
-        <CaretDown />
-      </div>
-      <Content />
-    </div>
-  )
-}
-
-//Mapping the icon array 
-function ButtonSkillContainer() {
+function SkillsList() {
   const icon = [
     {
       id: 1,
       name: 'html',
       content: `(HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. 
       Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript)`,
-      icon: <SiHtml5 />
+      icon: <TbBrandHtml5 size={35} />
     },
     {
       id: 2,
       name: 'css',
       content: `Cascading Style Sheets Level 3 (CSS3) is the iteration of the CSS standard used in the styling and formatting of Web pages. 
       CSS3 incorporates the CSS2 standard with some changes and improvements. A key change is the division of standard into separate modules, which makes it easier to learn and understand`,
-      icon: <SiCss3 />
+      icon: <TbBrandCss3  size={35} />
     },
     {
       id: 3,
       name: 'sass',
       content: `Sass is a CSS preprocessor, which adds special features such as variables, nested rules and mixins (sometimes referred to as syntactic sugar) into regular CSS. 
       The aim is to make the coding process simpler and more efficient. Let's explore in more detail`,
-      icon: <SiSass />
+      icon: <FaSass size={35} />
     },
     {
       id: 4,
       name: 'javascript',
       content: `JavaScript (often shortened to JS) is a lightweight, interpreted, object-oriented language with first-class functions, and is best known as the 
       scripting language for Web pages, but it's used in many non-browser environments as well`,
-      icon: <SiJavascript />
+      icon: <h1 className='uppercase text-rose-500/90 font-semibold text-3xl tracking-wide'>j<span className='text-xl'>s</span></h1>
     },
     {
       id: 5,
       name: 'typescript',
       content: `TypeScript is a free and open source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing 
       to the language. It is designed for the development of large applications and transpiles to JavaScript`,
-      icon: <SiTypescript />
+      icon: <h1 className='uppercase text-rose-500/90 font-semibold text-3xl tracking-tighter'>t<span className='text-xl'>s</span></h1>
     },
     {
       id: 6,
       name: 'react',
       content: '',
-      icon: <SiReact />,
+      icon: <SiReact size={35} />,
     },
     {
       id: 7,
       name: 'flutter',
       content: '',
-      icon: <SiFlutter />,
+      icon: <SiFlutter size={35} />,
     },
     {
       id: 8,
       name: 'nodejs',
       content: '',
-      icon: <SiNodedotjs />,
+      icon: <SiNodedotjs size={35} />,
     },
     {
       id: 9,
       name: 'npm',
       content: '',
-      icon: <SiNpm />,
+      icon: <IoLogoNpm size={35} />,
     },
     {
       id: 10,
       name: 'git',
       content: '',
-      icon: <SiGit />,
+      icon: <TbBrandGit size={35} />,
     },
     {
       id: 11,
       name: 'webpack',
       content: '',
-      icon: <SiWebpack />,
+      icon: <SiWebpack size={35} />,
     },
     {
       id: 12,
       name: 'express',
       content: '',
-      icon: <SiExpress />,
+      icon: <SiExpress size={35} />,
     },
     {
       id: 13,
       name: 'prisma',
       content: '',
-      icon: <SiPrisma />,
+      icon: <SiPrisma size={35} />,
     },
     {
       id: 14,
       name: 'mongodb',
       content: '',
-      icon: <SiMongodb />,
+      icon: <SiMongodb size={35} />,
     },
     {
       id: 15,
       name: 'postgresql',
       content: '',
-      icon: <SiPostgresql />,
+      icon: <SiPostgresql size={35} />,
     },
     {
       id: 16,
       name: 'tailwind',
       content: '',
-      icon: <SiTailwindcss />,
+      icon: <SiTailwindcss size={35} />,
     },
     {
       id: 17,
       name: 'bootstrap',
       content: '',
-      icon: <SiBootstrap />,
+      icon: <TbBrandBootstrap size={35} />,
     },
     {
       id: 18,
-      name: 'figma',
+      name: 'framer motion',
       content: '',
-      icon: <SiFigma />,
+      icon: <SiFramer size={35} />,
     },
     {
       id: 19,
-      name: 'photoshop',
+      name: 'figma',
       content: '',
-      icon: <SiAdobephotoshop />,
+      icon: <SiFigma size={35} />,
     },
     {
       id: 20,
-      name: 'github',
+      name: 'photoshop',
       content: '',
-      icon: <SiGithub />,
+      icon: <h1 className='uppercase text-rose-500/90 font-semibold text-3xl tracking-tighter'>p<span className='text-xl'>s</span></h1>,
     },
     {
       id: 21,
-      name: 'trello',
+      name: 'github',
       content: '',
-      icon: <SiTrello />,
+      icon: <VscGithub size={35} />,
     },
     {
       id: 22,
-      name: 'framer motion',
+      name: 'trello',
       content: '',
-      icon: <SiFramer />,
-    }
+      icon: <CgTrello size={35} />,
+    },
+    
+    {
+      id: 23,
+      name: 'agile',
+      content: '',
+      icon: <ImLoop2 size={30} />,
+    },
   ];
-
   return (
-    <div className='columns-1 space-y-5'>
-      {icon.map((icon) => <ButtonSkill icon={icon.icon} name={icon.name} content={icon.content} key={icon.id} />)}
-    </div>
+    <>
+      {icon.map((icon) => <Button icon={icon.icon} name={icon.name} content={icon.content} key={icon.id} />)}
+    </>
   )
 }
 
+function Button(props) {
 
+  const [show, setShow] = useState(false);
+  const handleShow = () => setShow(!show);
+
+  const style = {
+    icon: {
+      text: 'text-rose-500/90',
+    },
+    name: {
+      text: 'text-2xl text-center uppercase text-gray-200 font-para',
+      shadow: {textShadow: '2px 2px 2px gray'}
+    },
+    content: {
+      text: 'text-lg text-blue-100/70 leading-none font-para'
+    },
+    button: 'bg-zinc-700/40  border-l border-gray-600 rounded-lg shadow-md shadow-gray-500',
+    caret: 'text-gray-400 '
+  }
+
+  return (
+    <div onClick={handleShow} className={`${show && 'flex-col'} ${style.button} px-4 py-2 flex`}>
+      <div className='w-full flex items-center'>
+        <span className={`${style.icon.text} grow-[1]`} >
+          {props.icon}
+        </span>
+        <span className={`${style.name.text} grow-[3] w-full`} style={style.name.shadow}>
+          {props.name}
+        </span>
+        <span className={` ${style.caret} grow-[1]`} >
+          <BsCaretDown size={20} className={`${show && 'rotate-180'}`} />
+        </span>
+      </div>
+      <span className={`${show ? 'visible' : 'hidden'} ${style.content.text} py-4 `}>
+        {props.content}
+      </span>
+    </div>
+  )
+}
 
 export default Skills;
 
