@@ -14,7 +14,9 @@ function Skills() {
 
   return (
     <>
+    <div>
       <ButtonSkillContainer />
+      </div>
     </>
   )
 }
@@ -24,17 +26,23 @@ function Skills() {
 
 
 function ButtonSkill(props) {
-  //CREATE COMPONENT FOR SHOW SKILLS LIKE BUTTON
-  //Set a state variable and method for button state.
-  //if SHOW is true the button will show the desription of content  
+
   const [show, setShow] = useState(false);
   const handleShowChange = () => setShow(!show);
 
 
+
+
+
+
+
   //LOW-ORDER COMPONENT
-  //Icon container
-  const Icon = () => <span className='text-4xl'>{props.icon}</span>;
-  //Name container
+
+  const Icon = () => (
+    <span className='text-4xl'>{props.icon}</span>
+  );
+
+
   const Name = () => {
     const textShadow = { textShadow: '2px 2px 1px  gray' }
     return (
@@ -44,17 +52,25 @@ function ButtonSkill(props) {
         </h1>
       </div>
     )
-  }
-  //Content container
+  };
+
+
   const Content = () => (
-    <div className={`${!show && 'hidden'} px-4 pb-4  `}>
-      <h1 className='text-gray-300/70 font-para text-lg leading-5  '>
+    <motion.div initial='hidden' animate='visible'  variants={animation} className={`${!show && 'hidden'} px-4 pb-4  `}>
+      <motion.h1 className='text-gray-300/70 font-para text-lg leading-5  '>
         {props.content}
-      </h1>
-    </div>
-  )
-  //Caret-down
-  const CaretDown = () => <BsCaretDown size={30} className={`${show && 'rotate-180'} w-[5%]`} />
+      </motion.h1>
+    </motion.div>
+  );
+
+
+  const CaretDown = () => (
+    <BsCaretDown size={30} className={`${show && 'rotate-180'} w-[5%]`} />
+  );
+
+
+
+
 
 
   //styiling border for button
@@ -64,6 +80,26 @@ function ButtonSkill(props) {
     borderRadius: '10px',
     borderColor: 'white',
     boxShadow: '0px 0px 5px 1px white',
+  }
+
+  const animation = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        ease: 'linear',
+      }
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: 0.9,
+        ease: 'linear',
+      }
+    }
   }
 
   return (

@@ -1,5 +1,14 @@
 import { AnimatePresence, delay, filterProps, motion } from 'framer-motion';
 import { createRef, useEffect, useReducer, useState, React } from 'react';
+import {
+  SiJavascript, SiTypescript, SiHtml5, SiCss3,
+  SiSass, SiReact, SiFlutter, SiMongodb, SiPostgresql, SiPrisma, SiExpress, SiNpm,
+  SiNodedotjs, SiGit, SiTailwindcss, SiBootstrap, SiWebpack, SiGithub, SiTrello,
+  SiFigma, SiAdobephotoshop, SiFramer
+} from 'react-icons/si';
+import { BsCaretDown } from 'react-icons/bs';
+import { AiOutlineHtml5 } from 'react-icons/ai';
+import { TbBrandCss3 } from 'react-icons/tb';
 
 /* function Prova() {
   return (
@@ -411,10 +420,200 @@ function Sectione({ color, size, children }) {
 
 
 function Prova() {
-  return (
-    <div>
-     
 
+
+  return (
+    <div className='text-white bg-zinc-800 p-4 space-y-6'>
+      <Buttons />
+    </div>
+
+  )
+}
+
+
+function Buttons() {
+  const icon = [
+    {
+      id: 1,
+      name: 'html',
+      content: `(HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. 
+      Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript)`,
+      icon: <SiHtml5 size={35} />
+    },
+    {
+      id: 2,
+      name: 'css',
+      content: `Cascading Style Sheets Level 3 (CSS3) is the iteration of the CSS standard used in the styling and formatting of Web pages. 
+      CSS3 incorporates the CSS2 standard with some changes and improvements. A key change is the division of standard into separate modules, which makes it easier to learn and understand`,
+      icon: <SiCss3 size={35} />
+    },
+    {
+      id: 3,
+      name: 'sass',
+      content: `Sass is a CSS preprocessor, which adds special features such as variables, nested rules and mixins (sometimes referred to as syntactic sugar) into regular CSS. 
+      The aim is to make the coding process simpler and more efficient. Let's explore in more detail`,
+      icon: <SiSass size={35} />
+    },
+    {
+      id: 4,
+      name: 'javascript',
+      content: `JavaScript (often shortened to JS) is a lightweight, interpreted, object-oriented language with first-class functions, and is best known as the 
+      scripting language for Web pages, but it's used in many non-browser environments as well`,
+      icon: <SiJavascript size={35} />
+    },
+    {
+      id: 5,
+      name: 'typescript',
+      content: `TypeScript is a free and open source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing 
+      to the language. It is designed for the development of large applications and transpiles to JavaScript`,
+      icon: <SiTypescript size={35} />
+    },
+    {
+      id: 6,
+      name: 'react',
+      content: '',
+      icon: <SiReact size={35} />,
+    },
+    {
+      id: 7,
+      name: 'flutter',
+      content: '',
+      icon: <SiFlutter size={35} />,
+    },
+    {
+      id: 8,
+      name: 'nodejs',
+      content: '',
+      icon: <SiNodedotjs size={35} />,
+    },
+    {
+      id: 9,
+      name: 'npm',
+      content: '',
+      icon: <SiNpm size={35} />,
+    },
+    {
+      id: 10,
+      name: 'git',
+      content: '',
+      icon: <SiGit size={35} />,
+    },
+    {
+      id: 11,
+      name: 'webpack',
+      content: '',
+      icon: <SiWebpack size={35} />,
+    },
+    {
+      id: 12,
+      name: 'express',
+      content: '',
+      icon: <SiExpress size={35} />,
+    },
+    {
+      id: 13,
+      name: 'prisma',
+      content: '',
+      icon: <SiPrisma size={35} />,
+    },
+    {
+      id: 14,
+      name: 'mongodb',
+      content: '',
+      icon: <SiMongodb size={35} />,
+    },
+    {
+      id: 15,
+      name: 'postgresql',
+      content: '',
+      icon: <SiPostgresql size={35} />,
+    },
+    {
+      id: 16,
+      name: 'tailwind',
+      content: '',
+      icon: <SiTailwindcss size={35} />,
+    },
+    {
+      id: 17,
+      name: 'bootstrap',
+      content: '',
+      icon: <SiBootstrap size={35} />,
+    },
+    {
+      id: 18,
+      name: 'figma',
+      content: '',
+      icon: <SiFigma size={35} />,
+    },
+    {
+      id: 19,
+      name: 'photoshop',
+      content: '',
+      icon: <SiAdobephotoshop size={35} />,
+    },
+    {
+      id: 20,
+      name: 'github',
+      content: '',
+      icon: <SiGithub size={35} />,
+    },
+    {
+      id: 21,
+      name: 'trello',
+      content: '',
+      icon: <SiTrello size={35} />,
+    },
+    {
+      id: 22,
+      name: 'framer motion',
+      content: '',
+      icon: <SiFramer size={35} />,
+    }
+  ];
+  return (
+    <>
+      {icon.map((icon) => <Button icon={icon.icon} name={icon.name} content={icon.content} key={icon.id} />)}
+    </>
+  )
+}
+
+function Button(props) {
+
+  const [show, setShow] = useState(false);
+  const handleShow = () => setShow(!show);
+
+  const style = {
+    icon: {
+      text: 'text-gray-100/80',
+    },
+    name: {
+      text: 'text-3xl text-center uppercase text-rose-500/90 font-para',
+      shadow: {textShadow: '1px 1px 5px rgb(244 63 94)'}
+    },
+    content: {
+      text: 'text-lg text-blue-100/70 leading-none font-para'
+    },
+    button: 'bg-zinc-700/40 border-t rounded-lg shadow-md shadow-gray-400',
+    caret: 'text-gray-400 border-l rounded-full shadow-md shadow-gray-600'
+  }
+
+  return (
+    <div onClick={handleShow} className={`${show && 'flex-col'} ${style.button} px-4 py-2 flex`}>
+      <div className='w-full flex items-center'>
+        <span className={`${style.icon.text} grow-[1]`} >
+          {props.icon}
+        </span>
+        <span className={`${style.name.text} grow-[3] w-full`} style={style.name.shadow}>
+          {props.name}
+        </span>
+        <span className={`${style.caret}grow-[1]`} >
+          <BsCaretDown size={20} />
+        </span>
+      </div>
+      <span className={`${show ? 'visible' : 'hidden'} ${style.content.text} py-4 `}>
+        {props.content}
+      </span>
     </div>
   )
 }
