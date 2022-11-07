@@ -1,61 +1,54 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { SlSocialLinkedin, SlSocialGithub } from 'react-icons/sl';
-import { VscMail } from 'react-icons/vsc';
-import { BsTelephone } from 'react-icons/bs';
+import { socialIcons } from '../api/db';
+import { GoLocation } from 'react-icons/go';
+import avatar from '../assets/avatar.png';
 
 
 function Footer() {
   return (
-    <>
-      <SocialIcon />
-    </>
+    <div className='w-full h-screen'>
+      <div className='font-blucobra text-gray-300 -400/70 text-9xl mb-12' >
+        CONTACT
+      </div>
+      <div>
+        <SocialIcon />
+      </div>
+      <LocationInfo />
+    </div>
+  )
+}
+
+
+const LocationInfo = () => {
+  return (
+    <div className='flex items-center justify-between mt-24'>
+      <GoLocation size={50} className='text-rose-600' />
+      <div>
+        <div className='text-gray-400 font-semibold tracking-tight leading-5   text-center'>
+          Via Ugo La Malfa, 5<br />
+          Genzano Di Roma - 00045<br />
+          Roma - 00118/00199 - UTC+1 ITALIA
+        </div>
+      </div>
+      <img src={avatar} alt='profile' width={75} className='rounded-full border-2 border-rose-600 px-2' />
+    </div>
   )
 }
 
 
 const SocialIcon = () => {
-  const socialIcon = [
-    {
-      id: 1,
-      name: 'github',
-      icon: <SlSocialGithub size={35} />,
-      link: 'https://github.com/Christian-Silvestri',
-      linkDescription: 'github.com/christian-silvestri',
-    },
-    {
-      id: 2,
-      name: 'linkedin',
-      icon: <SlSocialLinkedin size={35} />,
-      link: 'https://www.linkedin.com/in/christian-silvestri/',
-      linkDescription: 'linkedin.com/in/christian-silvestri'
-    },
-    {
-      id: 3,
-      name: 'mail',
-      icon: <VscMail size={35} />,
-      link: '',
-      linkDescription: 'christiansilvestri@live.it',
-    },
-    {
-      id: 4,
-      name: 'phone',
-      icon: <BsTelephone size={35} />,
-      link: '',
-      linkDescription: '+39 3289539919'
-    }
-  ];
-
 
   return (
-    <div className='bg-zinc-900 py-8 text-rose-500 h-screen space-y-8 '>
-
-    {socialIcon.map((icon) => <ButtonSocial key={icon.id} icon={icon.icon} name={icon.name} link={icon.link} linkDescription={icon.linkDescription} />)}
-
-
+    <div className='bg-zinc-900 space-y-4 '>
+      {socialIcons.map((icon) => <ButtonSocial key={icon.id} icon={icon.icon} name={icon.name} link={icon.link} linkDescription={icon.linkDescription} />)}
     </div>
   )
 }
+
+
+
+
 
 
 function ButtonSocial(props) {
@@ -64,9 +57,11 @@ function ButtonSocial(props) {
   const handleShowChange = () => setShow(!show);
 
 
+
   const style = {
     button: 'border-b-4 border-t border-l-2 rounded-full border-rose-600 shadow-md shadow-rose-600 text-gray-300',
-    text: 'text-5xl font-blucobra text-white'
+    text: 'text-5xl font-blucobra text-white',
+    link: 'text-md text-gray-300'
   };
 
   const animationButton = {
@@ -92,27 +87,24 @@ function ButtonSocial(props) {
       transition: {
         type: 'spring',
         ease: 'easeIn',
-        duration: 0.9,
+        duration: 0.3,
       }
     },
-    exit: {
-      x: 200,
-      opacity: 0,
-      
-    }
+
   };
 
+
   return (
-    <div className='flex w-full gap-6'>
+    <div className='flex w-full gap-6 '>
       <motion.div onClick={handleShowChange} whileHover={'initial'} whileTap={'animate'} variants={animationButton} className={`${style.button} p-4`} >
         {props.icon}
       </motion.div>
-      <div className='flex items-center'>
+      <div className='flex items-center overflow-hidden w-fit'>
         <h1 className={`${show && 'hidden'} ${style.text}`}>{props.name}</h1>
         <AnimatePresence  >
           {
             show &&
-            <motion.a initial={'initial'} animate={'animate'} exit={'exit'} variants={animationLink} href={props.link} alt='Christian Silvestr Github'>{props.linkDescription}</motion.a>
+            <motion.a className={`${style.link} flex items-center gap-2 min-w-full`} initial={'initial'} animate={'animate'} variants={animationLink} href={props.link} alt='Christian Silvestr Github'>{props.linkDescription}</motion.a>
           }
         </AnimatePresence>
 

@@ -8,6 +8,10 @@ import { IoLogoNpm } from 'react-icons/io';
 import { VscGithub } from 'react-icons/vsc';
 import { CgTrello } from 'react-icons/cg';
 import { ImLoop2 } from 'react-icons/im';
+import { SlSocialLinkedin, SlSocialGithub } from 'react-icons/sl';
+import { VscMail } from 'react-icons/vsc';
+import { BsTelephone } from 'react-icons/bs';
+import { FiExternalLink } from 'react-icons/fi'
 
 
 
@@ -248,4 +252,41 @@ export const icon = [
     icon: <ImLoop2 size={30} />,
     link: <a href='https://www.atlassian.com/agile' alt='AGILE METHODOLOGY - Information Page'>view more</a>
   },
+];
+
+
+
+
+
+
+
+export const socialIcons = [
+  {
+    id: 1,
+    name: 'github',
+    icon: <SlSocialGithub size={35} />,
+    link: 'https://github.com/Christian-Silvestri',
+    linkDescription: <>github.com/christian-silvestri<FiExternalLink className='text-rose-500' /></>,
+  },
+  {
+    id: 2,
+    name: 'linkedin',
+    icon: <SlSocialLinkedin size={35} />,
+    link: 'https://www.linkedin.com/in/christian-silvestri/',
+    linkDescription: <>linkedin.com/in/christian-silvestri<FiExternalLink className='text-rose-500' /></>
+  },
+  {
+    id: 3,
+    name: 'mail',
+    icon: <VscMail size={35} />,
+    link: '',
+    linkDescription: 'christiansilvestri@live.it',
+  },
+  {
+    id: 4,
+    name: 'phone',
+    icon: <BsTelephone size={35} />,
+    link: '',
+    linkDescription: '+39 3289539919'
+  }
 ];
