@@ -96,13 +96,14 @@ function ButtonSocial(props) {
       }
     },
     exit: {
-      opacity: 0,
       x: 200,
+      opacity: 0,
+      
     }
   };
 
   return (
-    <div className='flex w-fit gap-6'>
+    <div className='flex w-fit gap-6 overflow-hidden'>
       <motion.div onClick={handleShowChange} whileHover={'initial'} whileTap={'animate'} variants={animationButton} className={`${style.button} p-4`} >
         {props.icon}
       </motion.div>

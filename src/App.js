@@ -21,7 +21,7 @@ function App() {
         {/* <Prova /> */}
         <Layout>
           <Footer/>
-          <Skills />
+          
         </Layout>
 
         {/* <LogoCS /> */}
