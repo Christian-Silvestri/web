@@ -21,10 +21,10 @@ function Footer() {
         <span>
           <SocialIcon />
         </span>
-        <span>
+        <div>
           <h1 className='uppercase font-blucobra text-7xl text-white'>get in touch</h1>
           <EmailContactForm />
-        </span>
+        </div>
       </div>
       
     </div>
@@ -147,7 +147,7 @@ const EmailContactForm = () => {
 
   const Input = (props) => {
     const style = 'text-gray-300 min-h-[35px] bg-transparent border border-rose-500 rounded-md';
-    return <input type={props.type} name={props.name} placeholder={props.placeholder} className={`${style} px-1 w-full`} />
+    return <input type={props.type} name={props.name} placeholder={props.placeholder} className={`${style} px-1 w-full`} required  />
   }
 
   const TextArea = (props) => {
@@ -157,16 +157,27 @@ const EmailContactForm = () => {
 
   const Button = () => {
     const style = {
-      button: 'border-b-4 border-t border-l-2 rounded-md shadow-md shadow-rose-600 border-rose-500',
+      button: '',
       icon: 'text-rose-500',
       text: 'font-para text-2xl font-black text-white uppercase text-zinc-300',
     };
+    const animation = {
+      initial: { scale: 1.1 },
+      animate: {
+        scale: 0.9,
+        transition: {
+          type: 'spring',
+          stiffness: 400,
+          damping: 17,
+        }
+      }
+    };
 
     return (
-      <button type='submit' className={`${style.button} w-full px-4 py-1 justify-center flex items-center gap-2`}>
+      <motion.button whileHover={'initial'} whileTap={'animate'} variants={animation} type='submit' className={`${style.button} w-fit  justify-center flex items-center gap-2`}>
         <SiMinutemailer size={45} className={style.icon} />
         <span className={`${style.text}`}>send a message</span>
-      </button>
+      </motion.button>
     )
   }
 
@@ -178,15 +189,15 @@ const EmailContactForm = () => {
           <Input type='text' name='lastName' placeholder='Last Name' />
           <Input type='email' name='email' placeholder='E-mail' />
         </div>
-        <div className='w-1/3'>
+        <div className='max-w-min'>
           {/* <BiMailSend size={70} className='text-white' /> */}
-          <img src={avatar} alt='avatar' className='rounded-lg  w-full px-1 ' />
+          <img src={avatar} alt='avatar' className='rounded-lg  max-w-[105px] px-1 ' />
         </div>
       </div>
       <div className='pt-2'>
         <TextArea name='message' placeholder='Message...' />
       </div>
-      <div className='w-full flex justify-center pt-2'>
+      <div className='w-full flex justify-center '>
         <Button />
       </div>
     </form>
