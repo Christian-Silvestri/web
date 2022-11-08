@@ -71,7 +71,7 @@ function ButtonSocial(props) {
 
   const style = {
     button: 'border-b-4 border-t border-l-2 rounded-full border-rose-600 shadow-md shadow-rose-600 text-gray-300',
-    text: 'text-5xl font-blucobra text-white',
+    text: 'text-5xl font-blucobra text-white cursor-default ',
     link: 'text-md text-gray-300'
   };
 
@@ -110,12 +110,12 @@ function ButtonSocial(props) {
       <motion.div onClick={handleShowChange} whileHover={'initial'} whileTap={'animate'} variants={animationButton} className={`${style.button} p-4`} >
         {props.icon}
       </motion.div>
-      <div className='flex items-center overflow-hidden w-fit'>
+      <div className='flex items-center overflow-hidden w-fit' onClick={handleShowChange}>
         <h1 className={`${show && 'hidden'} ${style.text}`}>{props.name}</h1>
         <AnimatePresence  >
           {
             show &&
-            <motion.a className={`${style.link} flex items-center gap-2 min-w-full`} initial={'initial'} animate={'animate'} variants={animationLink} href={props.link} alt='Christian Silvestr Github'>{props.linkDescription}</motion.a>
+            <motion.a className={`${style.link} flex items-center gap-2 min-w-full`} initial={'initial'} animate={'animate'} variants={animationLink} href={props.link} target='_blank' alt={props.alt} >{props.linkDescription}</motion.a>
           }
         </AnimatePresence>
 
@@ -156,7 +156,7 @@ const EmailContactForm = () => {
 
   const Button = () => {
     const style = {
-      button: 'border-b-4 border-t border-l-2 rounded-xl shadow-md shadow-gray-500',
+      button: 'border-b-4 border-t border-l-2 rounded-md shadow-md shadow-rose-700 border-rose-500',
       icon: 'text-rose-500',
       text: 'font-para text-3xl text-white uppercase',
     };

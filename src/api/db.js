@@ -266,6 +266,7 @@ export const socialIcons = [
     name: 'github',
     icon: <SlSocialGithub size={35} />,
     link: 'https://github.com/Christian-Silvestri',
+    alt: 'Christian Silvestri GitHub',
     linkDescription: <>github.com/christian-silvestri<FiExternalLink className='text-rose-500' /></>,
   },
   {
@@ -273,20 +274,23 @@ export const socialIcons = [
     name: 'linkedin',
     icon: <SlSocialLinkedin size={35} />,
     link: 'https://www.linkedin.com/in/christian-silvestri/',
+    alt: 'Christian Silvestri LinkedIn',
     linkDescription: <>linkedin.com/in/christian-silvestri<FiExternalLink className='text-rose-500' /></>
   },
   {
     id: 3,
     name: 'mail',
     icon: <VscMail size={35} />,
-    link: '',
+    link: 'mailto:christiansilvestri.live.it',
+    alt: 'Send email to Christian Silvestri',
     linkDescription: 'christiansilvestri@live.it',
   },
   {
     id: 4,
     name: 'phone',
     icon: <BsTelephone size={35} />,
-    link: '',
+    link: 'tel:3289539919',
+    alt: 'Christian Silvestri phone number',
     linkDescription: '+39 3289539919'
   }
 ];
