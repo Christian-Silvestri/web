@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.31f136c8.css",
-    "main.js": "/web/static/js/main.36b3ba08.js",
+    "main.css": "/web/static/css/main.0dcc128a.css",
+    "main.js": "/web/static/js/main.9e893373.js",
     "static/media/Exo2-VariableFont_wght.ttf": "/web/static/media/Exo2-VariableFont_wght.718ec91358aa7ee8083b.ttf",
     "static/media/ChisatoRegular.ttf": "/web/static/media/ChisatoRegular.fefefae2bd7937433311.ttf",
     "static/media/avatar.png": "/web/static/media/avatar.fbc25b2372be8184f481.png",
@@ -9,11 +9,11 @@
     "static/media/Michroma-Regular.ttf": "/web/static/media/Michroma-Regular.d2ad050949cf83809690.ttf",
     "static/media/BlueCobraExtraExpanded.otf": "/web/static/media/BlueCobraExtraExpanded.3162543443ad24e6eb40.otf",
     "index.html": "/web/index.html",
-    "main.31f136c8.css.map": "/web/static/css/main.31f136c8.css.map",
-    "main.36b3ba08.js.map": "/web/static/js/main.36b3ba08.js.map"
+    "main.0dcc128a.css.map": "/web/static/css/main.0dcc128a.css.map",
+    "main.9e893373.js.map": "/web/static/js/main.9e893373.js.map"
   },
   "entrypoints": [
-    "static/css/main.31f136c8.css",
-    "static/js/main.36b3ba08.js"
+    "static/css/main.0dcc128a.css",
+    "static/js/main.9e893373.js"
   ]
 }
