@@ -27,10 +27,6 @@
   src: url('../public/font/Syncopate-Bold.ttf');
 }
 
-
-
-
-
 @media only screen and (max-width: 896px) {
   html {
     
@@ -40,6 +36,20 @@
   ::-webkit-scrollbar {
     display: none;
   }
+}
+
+input::placeholder {
+  font-weight: bold;
+  opacity: .3;
+  color: darkgray;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  
+}
+textarea::placeholder {
+  font-weight: bold;
+  opacity: 0.3;
+  color: darkgray;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* .CS-gradient {

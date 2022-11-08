@@ -10,9 +10,6 @@ function Skills() {
     </>
   )
 }
-
-
-
 const Button = (props) => {
 
   const [show, setShow] = useState(false);

@@ -1,18 +1,29 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { socialIcons } from '../api/db';
 import { GoLocation } from 'react-icons/go';
+import { BiMailSend } from 'react-icons/bi';
+import { SiMinutemailer } from 'react-icons/si';
 import avatar from '../assets/avatar.png';
+import emailjs from '@emailjs/browser';
+
+
+
 
 
 function Footer() {
   return (
-    <div className='w-full h-screen'>
-      <div className='font-blucobra text-gray-300 -400/70 text-9xl mb-12' >
+    <div className='w-full'>
+      <div className='font-blucobra text-gray-300 -400/70 text-9xl mb-8' >
         CONTACT
       </div>
-      <div>
-        <SocialIcon />
+      <div className='flex flex-col gap-12'>
+        <span>
+          <SocialIcon />
+        </span>
+        <span>
+          <EmailContactForm />
+        </span>
       </div>
       <LocationInfo />
     </div>
@@ -112,6 +123,72 @@ function ButtonSocial(props) {
     </div>
   )
 
+}
+
+
+const EmailContactForm = () => {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+      .then((result) => {
+        alert('SUCCESS ' + result);
+      }, (error) => {
+        alert('ERROR ' + error)
+      })
+
+    form.current.reset();
+  };
+
+
+  const Input = (props) => {
+    const style = 'text-gray-300 min-h-[35px] bg-transparent border border-rose-500 rounded-md';
+    return <input type={props.type} name={props.name} placeholder={props.placeholder} className={`${style} px-1 w-full`} />
+  }
+
+  const TextArea = (props) => {
+    const style = 'text-gray-300 bg-transparent border border-rose-500 rounded-md';
+    return <textarea name={props.name} placeholder={props.placeholder} className={`${style} min-h-[200px] w-full`} />
+  }
+
+  const Button = () => {
+    const style = {
+      button: 'border-b-4 border-t border-l-2 rounded-xl shadow-md shadow-gray-500',
+      icon: 'text-rose-500',
+      text: 'font-para text-3xl text-white uppercase',
+    };
+
+    return (
+      <button type='submit' className={`${style.button} px-4 py-1 flex items-center gap-2`}>
+        <SiMinutemailer size={45} className={style.icon} />
+        <span className={`${style.text}`}>send</span>
+      </button>
+    )
+  }
+
+  return (
+    <form ref={form} onSubmit={sendEmail} className='w-full py-4 text-center'>
+      <div className='flex justify-between'>
+        <div className='w-1/3'>
+          <BiMailSend size={60} className='text-white' />
+        </div>
+        <div className='w-full space-y-2' >
+          <Input type='text' name='firstName' placeholder='First Name' />
+          <Input type='text' name='lastName' placeholder='Last Name' />
+          <Input type='email' name='email' placeholder='E-mail' />
+        </div>
+      </div>
+      <div className='pt-2'>
+        <TextArea name='message' placeholder='Message...' />
+      </div>
+      <div className='w-full flex justify-center pt-2'>
+        <Button />
+      </div>
+    </form>
+  )
 }
 
 
