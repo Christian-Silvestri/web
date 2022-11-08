@@ -14,7 +14,7 @@ import emailjs from '@emailjs/browser';
 function Footer() {
   return (
     <div className='w-full'>
-      <div className='font-blucobra text-gray-300 -400/70 text-9xl mb-8' >
+      <div className='font-blucobra text-white text-9xl mb-8' >
         CONTACT
       </div>
       <div className='flex flex-col gap-12'>
@@ -22,6 +22,7 @@ function Footer() {
           <SocialIcon />
         </span>
         <span>
+          <h1 className='uppercase font-blucobra text-7xl text-white'>get in touch</h1>
           <EmailContactForm />
         </span>
       </div>
@@ -42,7 +43,7 @@ const LocationInfo = () => {
           Roma - 00118/00199 - UTC+1 ITALIA
         </div>
       </div>
-      <img src={avatar} alt='profile' width={75} className='rounded-full border-2 border-rose-600 px-2' />
+
     </div>
   )
 }
@@ -71,7 +72,7 @@ function ButtonSocial(props) {
 
   const style = {
     button: 'border-b-4 border-t border-l-2 rounded-full border-rose-600 shadow-md shadow-rose-600 text-gray-300',
-    text: 'text-5xl font-blucobra text-white cursor-default ',
+    text: 'text-xl font-lobster uppercase text-zinc-300 font-black cursor-default ',
     link: 'text-md text-gray-300'
   };
 
@@ -106,7 +107,7 @@ function ButtonSocial(props) {
 
 
   return (
-    <div className='flex w-full gap-6 '>
+    <div className='flex w-full gap-4 '>
       <motion.div onClick={handleShowChange} whileHover={'initial'} whileTap={'animate'} variants={animationButton} className={`${style.button} p-4`} >
         {props.icon}
       </motion.div>
@@ -156,29 +157,30 @@ const EmailContactForm = () => {
 
   const Button = () => {
     const style = {
-      button: 'border-b-4 border-t border-l-2 rounded-md shadow-md shadow-rose-700 border-rose-500',
+      button: 'border-b-4 border-t border-l-2 rounded-md shadow-md shadow-rose-600 border-rose-500',
       icon: 'text-rose-500',
-      text: 'font-para text-3xl text-white uppercase',
+      text: 'font-lobster text-xl font-black text-white uppercase text-zinc-300',
     };
 
     return (
-      <button type='submit' className={`${style.button} px-4 py-1 flex items-center gap-2`}>
+      <button type='submit' className={`${style.button} w-full px-4 py-1 justify-center flex items-center gap-2`}>
         <SiMinutemailer size={45} className={style.icon} />
-        <span className={`${style.text}`}>send</span>
+        <span className={`${style.text}`}>send a message</span>
       </button>
     )
   }
 
   return (
-    <form ref={form} onSubmit={sendEmail} className='w-full py-4 text-center'>
-      <div className='flex justify-between'>
-        <div className='w-1/3'>
-          <BiMailSend size={60} className='text-white' />
-        </div>
+    <form ref={form} onSubmit={sendEmail} className='w-full py- text-center'>
+      <div className='flex justify-between items-end'>
         <div className='w-full space-y-2' >
           <Input type='text' name='firstName' placeholder='First Name' />
           <Input type='text' name='lastName' placeholder='Last Name' />
           <Input type='email' name='email' placeholder='E-mail' />
+        </div>
+        <div className='w-1/3'>
+          {/* <BiMailSend size={70} className='text-white' /> */}
+          <img src={avatar} alt='avatar' className='rounded-lg  max-w-[80px] px-1 ' />
         </div>
       </div>
       <div className='pt-2'>
