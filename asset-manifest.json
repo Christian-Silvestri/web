@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.10c8022b.css",
-    "main.js": "/web/static/js/main.b6481c8a.js",
+    "main.css": "/web/static/css/main.44f8fb2d.css",
+    "main.js": "/web/static/js/main.dcbfdb21.js",
     "static/media/Exo2-VariableFont_wght.ttf": "/web/static/media/Exo2-VariableFont_wght.718ec91358aa7ee8083b.ttf",
     "static/media/ChisatoRegular.ttf": "/web/static/media/ChisatoRegular.fefefae2bd7937433311.ttf",
     "static/media/avatar.png": "/web/static/media/avatar.fbc25b2372be8184f481.png",
@@ -9,11 +9,11 @@
     "static/media/Michroma-Regular.ttf": "/web/static/media/Michroma-Regular.d2ad050949cf83809690.ttf",
     "static/media/BlueCobraExtraExpanded.otf": "/web/static/media/BlueCobraExtraExpanded.3162543443ad24e6eb40.otf",
     "index.html": "/web/index.html",
-    "main.10c8022b.css.map": "/web/static/css/main.10c8022b.css.map",
-    "main.b6481c8a.js.map": "/web/static/js/main.b6481c8a.js.map"
+    "main.44f8fb2d.css.map": "/web/static/css/main.44f8fb2d.css.map",
+    "main.dcbfdb21.js.map": "/web/static/js/main.dcbfdb21.js.map"
   },
   "entrypoints": [
-    "static/css/main.10c8022b.css",
-    "static/js/main.b6481c8a.js"
+    "static/css/main.44f8fb2d.css",
+    "static/js/main.dcbfdb21.js"
   ]
 }
