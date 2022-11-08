@@ -20,7 +20,8 @@ function App() {
 
         {/* <Prova /> */}
         <Layout>
-          <Footer/>
+          <Skills />
+         <div className="pt-36"> <Footer/></div>
           
         </Layout>
 

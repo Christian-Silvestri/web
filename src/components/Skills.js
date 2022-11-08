@@ -26,7 +26,7 @@ const Button = (props) => {
     content: {
       text: 'text-lg text-blue-100/70 leading-none font-para'
     },
-    button: 'bg-gray-800/80  border-l border-gray-600 rounded-lg shadow-md shadow-gray-500',
+    button: 'bg-zinc-800/80  border-l border-gray-600 rounded-lg shadow-md shadow-gray-500',
     caret: 'text-gray-400 ',
     link: 'font-bold text-sm text-rose-500/70 text-right uppercase'
   };

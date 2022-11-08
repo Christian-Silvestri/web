@@ -283,7 +283,7 @@ export const socialIcons = [
     icon: <VscMail size={35} />,
     link: 'mailto:christiansilvestri.live.it',
     alt: 'Send email to Christian Silvestri',
-    linkDescription: 'christiansilvestri@live.it',
+    linkDescription: <>christiansilvestri@live.it<FiExternalLink className='text-rose-500' /></>
   },
   {
     id: 4,
@@ -291,6 +291,6 @@ export const socialIcons = [
     icon: <BsTelephone size={35} />,
     link: 'tel:3289539919',
     alt: 'Christian Silvestri phone number',
-    linkDescription: '+39 3289539919'
+    linkDescription: <>+39 3289539919<FiExternalLink className='text-rose-500' /></>
   }
 ];

@@ -26,7 +26,7 @@ function Footer() {
           <EmailContactForm />
         </span>
       </div>
-      <LocationInfo />
+      
     </div>
   )
 }
@@ -72,7 +72,7 @@ function ButtonSocial(props) {
 
   const style = {
     button: 'border-b-4 border-t border-l-2 rounded-full border-rose-600 shadow-md shadow-rose-600 text-gray-300',
-    text: 'text-xl font-lobster uppercase text-zinc-300 font-black cursor-default ',
+    text: 'text-2xl font-para uppercase text-zinc-200 font-black cursor-default ',
     link: 'text-md text-gray-300'
   };
 
@@ -159,7 +159,7 @@ const EmailContactForm = () => {
     const style = {
       button: 'border-b-4 border-t border-l-2 rounded-md shadow-md shadow-rose-600 border-rose-500',
       icon: 'text-rose-500',
-      text: 'font-lobster text-xl font-black text-white uppercase text-zinc-300',
+      text: 'font-para text-2xl font-black text-white uppercase text-zinc-300',
     };
 
     return (
@@ -180,7 +180,7 @@ const EmailContactForm = () => {
         </div>
         <div className='w-1/3'>
           {/* <BiMailSend size={70} className='text-white' /> */}
-          <img src={avatar} alt='avatar' className='rounded-lg  max-w-[80px] px-1 ' />
+          <img src={avatar} alt='avatar' className='rounded-lg  w-full px-1 ' />
         </div>
       </div>
       <div className='pt-2'>
