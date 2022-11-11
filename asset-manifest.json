@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.018af29c.css",
-    "main.js": "/web/static/js/main.d71a647c.js",
+    "main.css": "/web/static/css/main.2685701f.css",
+    "main.js": "/web/static/js/main.67a6285c.js",
     "static/media/Exo2-VariableFont_wght.ttf": "/web/static/media/Exo2-VariableFont_wght.718ec91358aa7ee8083b.ttf",
     "static/media/ChisatoRegular.ttf": "/web/static/media/ChisatoRegular.fefefae2bd7937433311.ttf",
     "static/media/avatar.png": "/web/static/media/avatar.fbc25b2372be8184f481.png",
@@ -11,11 +11,11 @@
     "static/media/CertificatoDevelhope2M.png": "/web/static/media/CertificatoDevelhope2M.ed152ecb445424202f00.png",
     "static/media/vallauri2.png": "/web/static/media/vallauri2.03bbfd678324835dd40e.png",
     "index.html": "/web/index.html",
-    "main.018af29c.css.map": "/web/static/css/main.018af29c.css.map",
-    "main.d71a647c.js.map": "/web/static/js/main.d71a647c.js.map"
+    "main.2685701f.css.map": "/web/static/css/main.2685701f.css.map",
+    "main.67a6285c.js.map": "/web/static/js/main.67a6285c.js.map"
   },
   "entrypoints": [
-    "static/css/main.018af29c.css",
-    "static/js/main.d71a647c.js"
+    "static/css/main.2685701f.css",
+    "static/js/main.67a6285c.js"
   ]
 }
