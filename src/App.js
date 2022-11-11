@@ -6,6 +6,7 @@ import FramerMotionTest from "./FramerMotionTest";
 import Prova from './Prova';
 import Section from "./components/Section";
 import Footer from './components/Footer';
+import Carrer from "./components/Carrer";
 
 const { Layout } = Section();
 
@@ -19,12 +20,13 @@ function App() {
       <div>
 
         {/* <Prova /> */}
-        <LogoCS />
+      <LogoCS />
         <Layout>
         
-          <Skills />        
-         <Footer/>
-          
+                
+         <Carrer />
+         <Skills/>
+         <Footer/>          
         </Layout>
 
         {/* <LogoCS /> */}

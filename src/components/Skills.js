@@ -8,7 +8,7 @@ import { TbBrandHtml5 } from 'react-icons/tb';
 function Skills() {
   return (
     <div>
-      <div className='lg:hidden md:columns-2'>
+      <div className='lg:hidden '>
         <SkillsList />
       </div>
       <div className='hidden lg:flex flex-wrap justify-center items-center gap-8'>

@@ -2,7 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@layer utilities {
+  .title {
+    @apply text-white text-9xl font-blucobra 
+  }
+  .subtitle {
+    @apply text-white text-6xl font-blucobra
+  }
+  .para {
+    @apply leading-7 text-2xl text-blue-100/80 font-para
+  }
+}
 
 @font-face {
   font-family: 'LOBSTER';
@@ -56,6 +66,11 @@ textarea::placeholder {
 ::-webkit-scrollbar {
   display: none;
 }
+
+.textShadow {
+  text-shadow: 4px 4px 10px gray;
+}
+
 
 
 /* .CS-gradient {
