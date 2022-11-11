@@ -6,6 +6,8 @@ import { BiMailSend } from 'react-icons/bi';
 import { SiMinutemailer } from 'react-icons/si';
 import avatar from '../assets/avatar.png';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -14,36 +16,57 @@ import emailjs from '@emailjs/browser';
 function Footer() {
   return (
     <div className='w-full'>
-      <div className='font-blucobra text-white text-9xl mb-8' >
-        CONTACT
+      <div className='font-blucobra text-white text-9xl mb-8 btn-blue 2xl:text-11xl' >
+        <h1>CONTACT</h1>
       </div>
-      <div className='flex flex-col gap-12'>
-        <span>
+      <div className='flex flex-col gap-12 lg:flex-row lg:justify-between '>
+        <div className=''>
           <SocialIcon />
-        </span>
-        <div>
-          <h1 className='uppercase font-blucobra text-7xl text-white'>get in touch</h1>
-          <EmailContactForm />
         </div>
+        <div className=''>
+          <div className='md:max-w-md'>
+            <h1 className='uppercase  font-blucobra text-5xl text-white lg:hidden'>get in touch</h1>
+            <EmailContactForm />
+          </div>
+          <div>
+
+          </div>
+        </div>
+
       </div>
-      
+      <div>
+        <LocationInfo />
+        <Copyright />
+      </div>
     </div>
   )
 }
 
 
+const Copyright = () => {
+
+  return (
+    <h1>Copyright © CHRISTIAN SILVESTRI All right reserved</h1>
+  )
+}
+
 const LocationInfo = () => {
   return (
-    <div className='flex items-center justify-between mt-24'>
-      <GoLocation size={50} className='text-rose-600' />
-      <div>
-        <div className='text-gray-400 font-semibold tracking-tight leading-5   text-center'>
-          Via Ugo La Malfa, 5<br />
-          Genzano Di Roma - 00045<br />
-          Roma - 00118/00199 - UTC+1 ITALIA
+    <div className='text-center'>
+      <div className='flex items-center justify-center mt-24'>
+        <GoLocation size={20} className='text-rose-600 order-2' />
+        <div>
+          <div className='text-gray-500 font-semibold tracking-tight leading-5 order-1 text-center '>
+            Via Ugo La Malfa, 5<br />
+            Genzano Di Roma - 00045<br />
+            Roma - 00118/00199 - UTC+1 ITALIA
+          </div>
         </div>
-      </div>
 
+      </div>
+      <span className='text-gray-500 font-semibold tracking-tight leading-5'>
+        Copyright © CHRISTIAN SILVESTRI All right reserved
+      </span>
     </div>
   )
 }
@@ -52,7 +75,7 @@ const LocationInfo = () => {
 const SocialIcon = () => {
 
   return (
-    <div className='bg-zinc-900 space-y-4 '>
+    <div className='space-y-4 '>
       {socialIcons.map((icon) => <ButtonSocial key={icon.id} icon={icon.icon} name={icon.name} link={icon.link} linkDescription={icon.linkDescription} />)}
     </div>
   )
@@ -107,11 +130,11 @@ function ButtonSocial(props) {
 
 
   return (
-    <div className='flex w-full gap-4 '>
+    <div className='flex w-full gap-4  '>
       <motion.div onClick={handleShowChange} whileHover={'initial'} whileTap={'animate'} variants={animationButton} className={`${style.button} p-4`} >
         {props.icon}
       </motion.div>
-      <div className='flex items-center overflow-hidden w-fit' onClick={handleShowChange}>
+      <div className='flex items-center overflow-hidden ' onClick={handleShowChange}>
         <h1 className={`${show && 'hidden'} ${style.text}`}>{props.name}</h1>
         <AnimatePresence  >
           {
@@ -136,26 +159,38 @@ const EmailContactForm = () => {
 
     emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
       .then((result) => {
-        alert('SUCCESS ' + result);
+        toast.success('Email send conrrectly', { position: toast.POSITION.TOP_CENTER })
       }, (error) => {
-        alert('ERROR ' + error)
+        toast.error('an error has occurred!!! Please check the entered data ', { position: toast.POSITION.TOP_CENTER})
       })
 
     form.current.reset();
   };
 
 
-  const Input = (props) => {
+  const Input = (props, { className }) => {
+
+    const type = props.type;
+    const name = props.name;
+    const placeholder = props.placeholder;
+
     const style = 'text-gray-300 min-h-[35px] bg-transparent border border-rose-500 rounded-md';
-    return <input type={props.type} name={props.name} placeholder={props.placeholder} className={`${style} px-1 w-full`} required  />
+    return <input type={type} name={name} placeholder={placeholder} className={`${style} ${className} px-1 w-full`} required />
   }
 
-  const TextArea = (props) => {
+  const TextArea = (props, { className }) => {
+
+    const name = props.name;
+    const placeholder = props.placeholder;
+
     const style = 'text-gray-300 bg-transparent border border-rose-500 rounded-md';
-    return <textarea name={props.name} placeholder={props.placeholder} className={`${style} min-h-[200px] w-full`} />
+    return <textarea name={name} placeholder={placeholder} className={`${style} ${className} min-h-[200px] w-full`} />
   }
 
   const Button = () => {
+
+  
+
     const style = {
       button: '',
       icon: 'text-rose-500',
@@ -174,10 +209,13 @@ const EmailContactForm = () => {
     };
 
     return (
-      <motion.button whileHover={'initial'} whileTap={'animate'} variants={animation} type='submit' className={`${style.button} w-fit  justify-center flex items-center gap-2`}>
-        <SiMinutemailer size={45} className={style.icon} />
-        <span className={`${style.text}`}>send a message</span>
-      </motion.button>
+      <>
+        <motion.button  whileHover={'initial'} whileTap={'animate'} variants={animation} type='submit' className={`${style.button} w-fit  justify-center flex items-center gap-2`}>
+          <SiMinutemailer size={45} className={style.icon} />
+          <span className={`${style.text}`}>send a message</span>
+        </motion.button>
+        <ToastContainer />
+      </>
     )
   }
 

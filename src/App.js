@@ -19,8 +19,10 @@ function App() {
       <div>
 
         {/* <Prova /> */}
+        <LogoCS />
         <Layout>
         
+          <Skills />        
          <Footer/>
           
         </Layout>

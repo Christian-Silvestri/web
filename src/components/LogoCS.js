@@ -35,7 +35,7 @@ function LogoCS() {
     }
   };
 
-  const logoStyle = 'font-chisato text-teal-500';
+  const logoStyle = 'font-chisato text-rose-500';
   const logoSize = 'text-9xl md:text-10xl 2xl:text-11xl';
   const jobStyle = 'font-blucobra text-gray-300';
   const jobSize = {

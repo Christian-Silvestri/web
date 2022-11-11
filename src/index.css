@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 @font-face {
   font-family: 'LOBSTER';
   src: url('../public/font/Michroma-Regular.ttf');
@@ -51,6 +52,11 @@ textarea::placeholder {
   color: darkgray;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 
 /* .CS-gradient {
   
