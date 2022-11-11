@@ -16,7 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function Footer() {
   return (
     <div className='w-full'>
-      <div className='font-blucobra text-white text-9xl mb-8 btn-blue 2xl:text-11xl' >
+      <div className='font-blucobra text-white text-9xl mb-8 btn-blue 2xl:text-11xl pt-48 pb-8' >
         <h1>CONTACT</h1>
       </div>
       <div className='flex flex-col gap-12 lg:flex-row lg:justify-between '>

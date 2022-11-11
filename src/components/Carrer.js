@@ -16,9 +16,51 @@ function Carrer() {
 const About = () => {
 
 
+  const Education = () => {
+    return (
+      <div>
+        <div className='pb-4'>
+          <h1 className="title textShadow">education & training</h1>
+        </div>
+        <div>
+          <div className="flex items-center gap-2  w-full">
+            <div className='max-w-[100px]'>
+              <img src={develhope} alt='Develhope' />
+            </div>
+            <div className='para uppercase'>
+              <p className=''>DEVELHOPE - FullStack Web Developer Course</p>
+            </div>
+          </div>
+          <p className='para'>
+            During the Develhope course I learned development FullStack, with HTML, CSS, JAVASCRIPT, REACT and
+            NODE, to use Git and I acquired the skills needed on TypeScript.<br />
+            In the second part I explored all the elements essential to developing software and I have developed a
+            true web application with agile methodologies
+          </p>
+        </div>
 
-  return (
-    <section className="h-full w-full flex flex-col gap-48">
+        <div className='pt-8'>
+          <div className="flex items-center gap-2  w-full">
+            <div className='max-w-[100px] h-[100px] bg-white flex items-center rounded-lg'>
+              <img src={vallauri} alt='vallauri' />
+            </div>
+            <div className='para uppercase'>
+              <p className=''>ITIS - GIANCARLO VALLAURI</p>
+            </div>
+          </div>
+          <p className='para'>
+            Graduates in Computer Science and Telecommunications have specific skills in the field of information
+            systems, information processing, Web applications and technologies, networks and communication equipment;
+            has skills and knowledge that address the analysis, design, installation and management of computer systems,
+            databases, networks of processing systems and multimedia systems
+          </p>
+        </div>
+      </div>
+    )
+  }
+
+  const WhoIAm = () => {
+    return (
       <div>
         <div className='pb-8'>
           <h1 className='title textShadow' >who i am</h1>
@@ -35,47 +77,38 @@ const About = () => {
           </p>
         </div>
       </div>
-      <section>
-        <div className='pb-4'>
-          <h1 className="subtitle textShadow">education & training</h1>
+    )
+  }
+
+  const Objective = () => {
+    return (
+      <div>
+        <div className='pb-8'>
+          <h1 className='title textShadow ' >objective career</h1>
         </div>
         <div>
-          <div className="flex items-center gap-2  w-full">
-            <div className='max-w-[100px]'>
-              <img src={develhope} alt='Develhope' />
-            </div>
-            <div className='para uppercase'>
-              <p className=''>DEVELHOPE - FullStack Web Developer Course</p>
-            </div>
-          </div>
-          <p className='para'>
-            During the Develhope course I learned development FullStack, with HTML, CSS, JAVASCRIPT, REACT and
-            NODE, to use Git and I acquired the skills needed on TypeScript.<br/>
-            In the second part I explored all the elements essential to developing software and I have developed a
-            true web application with agile methodologies
+          <p className="para">
+            Full Stack graduate with a passion for developing scalable web applications and working across the full stack, to build complete web
+            applications including frontend, backend, and database management.<br />
+            Creating solutions to clients' website needs seeking employment at SmartWeb where I can combine my experience in building web portals,
+            applications and ecommerce websites to bring unique attributes to the organization.<br /><br />
+            I am looking to join forces with Red Technologies to continue to grow my skill set while contributing to the positive outcome of making people
+            “richer, smarter and happier
           </p>
         </div>
+      </div>
+    )
+  }
 
-        <div className='pt-8'>
-          <div className="flex items-center gap-2  w-full">
-            <div className='max-w-[100px] h-[100px] bg-white flex items-center'>
-              <img src={vallauri} alt='vallauri' />
-            </div>
-            <div className='para uppercase'>
-              <p className=''>ITIS - GIANCARLO VALLAURI</p>
-            </div>
-          </div>
-          <p className='para'>
-          Graduates in Computer Science and Telecommunications have specific skills in the field of information 
-          systems, information processing, Web applications and technologies, networks and communication equipment; 
-          has skills and knowledge that address the analysis, design, installation and management of computer systems, 
-          databases, networks of processing systems and multimedia systems
-          </p>
-        </div>
-      </section>
 
+
+  return (
+    <section className="flex flex-col gap-48 ">
+      <WhoIAm />
+      <Objective />
+      <Education />
       
-
+      
     </section>
   )
 }

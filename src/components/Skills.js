@@ -8,6 +8,7 @@ import { TbBrandHtml5 } from 'react-icons/tb';
 function Skills() {
   return (
     <div>
+      <h1 className='title textShadow pt-48 pb-8'>skills</h1>
       <div className='lg:hidden '>
         <SkillsList />
       </div>
@@ -41,8 +42,8 @@ const Button = (props) => {
 
 
   return (
-    <motion.div layout transition={{layout: {duration: 0.01, ease: 'easeInOut', type: 'spring', stiffness: 500, damping: 30}}}  onClick={handleShow} className={`${show && 'flex-col'} ${style.button} px-4 py-2 flex cursor-default`}>
-      <motion.div layout={'position'} className={`${show && 'justify-between'} w-full flex items-center`}>
+    <div   onClick={handleShow} className={`${show && 'flex-col'} ${style.button} px-4 py-2 flex cursor-default`}>
+      <div  className={`${show && 'justify-between'} w-full flex items-center`}>
         <span className={`${style.icon.text} grow-[1]`} >
           {props.icon}
         </span>
@@ -52,13 +53,13 @@ const Button = (props) => {
         <span className={` ${style.caret} grow-[1]`} >
           <BsCaretDown size={20} className={`${show && 'rotate-180'}`} />
         </span>
-      </motion.div>
-      <motion.span layout={'position'} className={`${show ? 'visible' : 'hidden'} ${style.content.text} py-4 w-full`}>
+      </div>
+      <span  className={`${show ? 'visible' : 'hidden'} ${style.content.text} py-4 w-full`}>
         {props.content}
         <br />
         <h1 className={`${style.link} pt-2`}>{props.link}</h1>
-      </motion.span>
-    </motion.div>
+      </span>
+    </div>
   )
 }
 
