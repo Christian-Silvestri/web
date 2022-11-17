@@ -87,7 +87,7 @@ function About() {
         </motion.div>
       </div>
 
-      <div className='w-full h-full  lg:pt-60'>
+      <motion.div layout className='w-full h-full  lg:pt-60'>
         <motion.div initial='hidden' whileInView={'visible'} viewport={{ once: true, amount: 0.5 }} variants={animation} className='lg:flex w-full justify-between gap-4'>
           <h2>education</h2>
           <h2 className='text-5xl lg:hidden'>and</h2>
@@ -111,7 +111,7 @@ function About() {
             </p>
           </motion.div>
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   )
 }
