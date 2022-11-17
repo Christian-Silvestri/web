@@ -1,5 +1,8 @@
 import { AnimatePresence, delay, filterProps, motion } from 'framer-motion';
 import { createRef, useEffect, useReducer, useState, React } from 'react';
+import develhope from './assets/CertificatoDevelhope2M.png';
+import { SlBasket } from 'react-icons/sl';
+import { BsGithub } from 'react-icons/bs';
 
 
 
@@ -410,9 +413,18 @@ function Sectione({ color, size, children }) {
 
 
 
+function Prova() {
 
+  return (
 
+    <div className=''>
+      <div className='box'></div>
+    </div>
 
+  )
+}
+
+export default Prova;
 
 
 

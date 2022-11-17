@@ -8,6 +8,7 @@ function Carrer() {
   return (
     <>
       <About />
+      
     </>
   )
 }
