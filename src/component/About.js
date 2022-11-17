@@ -58,7 +58,7 @@ function About() {
 
   return (
     <div className='px-2 md:px-8 lg:px-12 xl:px-24 2xl:px-60  gap-60 lg:flex flex-col lg:justify-between'>
-      <div className='ABOUT lg:flex items-center gap-24 h-screen lg:h-full'>
+      <div className='ABOUT lg:flex items-center gap-24 h-screen md:h-full'>
         <div className='TITLE lg:w-1/2 lg:text-right'>
           <h1 className=''>about<br/> me</h1>
         </div>
@@ -74,7 +74,7 @@ function About() {
           </p>
         </div>
       </div>
-      <div className='CARRER flex flex-col lg:flex-row lg:items-center lg:gap-24 h-screen lg:h-full'>
+      <div className='CARRER flex flex-col lg:flex-row lg:items-center lg:gap-24 h-screen md:h-full'>
         <div className='PARA lg:w-1/2 order-2 lg:order-1 md:w-4/5'>
           <p>
             Full Stack graduate with a passion for developing scalable web applications and working across the full stack, to build complete web
