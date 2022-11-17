@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.2685701f.css",
-    "main.js": "/web/static/js/main.67a6285c.js",
+    "main.css": "/web/static/css/main.ea6b4b7f.css",
+    "main.js": "/web/static/js/main.34ceb0db.js",
     "static/media/Exo2-VariableFont_wght.ttf": "/web/static/media/Exo2-VariableFont_wght.718ec91358aa7ee8083b.ttf",
+    "static/media/NT SEAWAVE (standart) - PERSONAL USE.otf": "/web/static/media/NT SEAWAVE (standart) - PERSONAL USE.899a89b1a43e60725146.otf",
     "static/media/ChisatoRegular.ttf": "/web/static/media/ChisatoRegular.fefefae2bd7937433311.ttf",
     "static/media/avatar.png": "/web/static/media/avatar.fbc25b2372be8184f481.png",
-    "static/media/Syncopate-Bold.ttf": "/web/static/media/Syncopate-Bold.b1babd4e584c5c49c48a.ttf",
     "static/media/Michroma-Regular.ttf": "/web/static/media/Michroma-Regular.d2ad050949cf83809690.ttf",
     "static/media/BlueCobraExtraExpanded.otf": "/web/static/media/BlueCobraExtraExpanded.3162543443ad24e6eb40.otf",
     "static/media/CertificatoDevelhope2M.png": "/web/static/media/CertificatoDevelhope2M.ed152ecb445424202f00.png",
     "static/media/vallauri2.png": "/web/static/media/vallauri2.03bbfd678324835dd40e.png",
     "index.html": "/web/index.html",
-    "main.2685701f.css.map": "/web/static/css/main.2685701f.css.map",
-    "main.67a6285c.js.map": "/web/static/js/main.67a6285c.js.map"
+    "main.ea6b4b7f.css.map": "/web/static/css/main.ea6b4b7f.css.map",
+    "main.34ceb0db.js.map": "/web/static/js/main.34ceb0db.js.map"
   },
   "entrypoints": [
-    "static/css/main.2685701f.css",
-    "static/js/main.67a6285c.js"
+    "static/css/main.ea6b4b7f.css",
+    "static/js/main.34ceb0db.js"
   ]
 }
