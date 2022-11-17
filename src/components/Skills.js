@@ -7,8 +7,8 @@ import { TbBrandHtml5 } from 'react-icons/tb';
 
 function Skills() {
   return (
-    <div>
-      <h1 className='title textShadow pt-48 pb-8'>skills</h1>
+    <div className=''>
+      {/* <h1 className='pt-48 pb-8'>skills</h1> */}
       <div className='lg:hidden '>
         <SkillsList />
       </div>
@@ -109,9 +109,9 @@ const ButtonCard = (props) => {
               </div>
             </motion.div>
           ) : (
-            <motion.h1 layout initial={'hidden'} animate={'visible'} exit={'exit'} variants={animation} className={`${style.content} px-2 py-2 overflow-y-scroll`}>
+            <motion.p layout initial={'hidden'} animate={'visible'} exit={'exit'} variants={animation} className={`${style.content} px-2 py-2 text-sm overflow-y-scroll`}>
               {props.content}
-            </motion.h1>
+            </motion.p>
           )}
         </AnimatePresence>
       </LayoutGroup>

@@ -28,7 +28,7 @@ module.exports = {
       },
       backgroundImage: {
         'collage': "url('./assets/collage.png')",
-        'webbo': "url('./assets/nasa/web13.jpg')",
+        'webbo': "url('./assets/nasa/web15.jpg')",
       }
     },
     colors: ({ colors }) => ({

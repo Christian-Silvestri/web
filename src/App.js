@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Carrer from "./components/Carrer";
 import About from "./component/About";
 
+
 const { Layout } = Section();
 
 
@@ -18,11 +19,13 @@ function App() {
 
   return (
     <>
-      <div className="bg-zinc-800 text-white">
+      <div className="bg-zinc-800 text-white ">
         {/*  <Prova /> */}
         {/* <Prova /> */}
      {/*    <LogoCS /> */}
+     <LogoCS />
         <About />
+        
         {/* <Layout>
         
                 

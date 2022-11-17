@@ -48,12 +48,12 @@ function LogoCS() {
       <div className=' h-screen flex items-center '>
         <div className=" flex md:items-end flex-col md:flex-row space-y-8 md:space-y-0" >
           <motion.div className={`${logoStyle} ${logoSize}`} initial='hidden' animate='visible' variants={animationLogo} >
-            <h1>CHRistian</h1>
-            <h1>siLvestRi</h1>
+            <h4>CHRistian</h4>
+            <h4>siLvestRi</h4>
           </motion.div>
           <motion.div className={`${jobStyle} ${objValues(jobSize)}`} initial='hidden' animate='visible' variants={animationJob}>
-            <h1 className='w-min'>FULL STACK</h1>
-            <h1 className='w-min'>WEB DEVELOPER</h1>
+            <h4 className='w-min'>FULL STACK</h4>
+            <h4 className='w-min'>WEB DEVELOPER</h4>
           </motion.div>
         </div>
       </div>
