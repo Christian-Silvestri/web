@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.93509f8f.css",
-    "main.js": "/web/static/js/main.f55daaec.js",
+    "main.css": "/web/static/css/main.1f7f6bca.css",
+    "main.js": "/web/static/js/main.a33d5af5.js",
     "static/media/Exo2-VariableFont_wght.ttf": "/web/static/media/Exo2-VariableFont_wght.718ec91358aa7ee8083b.ttf",
     "static/media/NT SEAWAVE (standart) - PERSONAL USE.otf": "/web/static/media/NT SEAWAVE (standart) - PERSONAL USE.899a89b1a43e60725146.otf",
     "static/media/ChisatoRegular.ttf": "/web/static/media/ChisatoRegular.fefefae2bd7937433311.ttf",
@@ -11,11 +11,11 @@
     "static/media/CertificatoDevelhope2M.png": "/web/static/media/CertificatoDevelhope2M.ed152ecb445424202f00.png",
     "static/media/vallauri2.png": "/web/static/media/vallauri2.03bbfd678324835dd40e.png",
     "index.html": "/web/index.html",
-    "main.93509f8f.css.map": "/web/static/css/main.93509f8f.css.map",
-    "main.f55daaec.js.map": "/web/static/js/main.f55daaec.js.map"
+    "main.1f7f6bca.css.map": "/web/static/css/main.1f7f6bca.css.map",
+    "main.a33d5af5.js.map": "/web/static/js/main.a33d5af5.js.map"
   },
   "entrypoints": [
-    "static/css/main.93509f8f.css",
-    "static/js/main.f55daaec.js"
+    "static/css/main.1f7f6bca.css",
+    "static/js/main.a33d5af5.js"
   ]
 }
