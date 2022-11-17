@@ -87,13 +87,13 @@ function About() {
         </motion.div>
       </div>
 
-      <motion.div layout className='w-full h-full  lg:pt-60'>
-        <motion.div initial='hidden' whileInView={'visible'} viewport={{ once: true, amount: 0.5 }} variants={animation} className='lg:flex w-full justify-between gap-4'>
+      <div className='w-full h-full  lg:pt-60 overflow-hidden'>
+        <div  className='lg:flex w-full justify-between gap-4'>
           <h2>education</h2>
           <h2 className='text-5xl lg:hidden'>and</h2>
           <h2>training</h2>
-        </motion.div>
-        <motion.div initial='hidden' whileInView={'visible'} viewport={{ once: true, amount: 0.5 }}  className='md:w-4/5 lg:flex lg:w-full gap-24 xl:gap-36 2xl:gap-48 '>
+        </div>
+        <motion.div initial='hidden' whileInView={'visible'}  className='md:w-4/5 lg:flex lg:w-full gap-24 xl:gap-36 2xl:gap-48 '>
           <motion.div variants={animationEdu} className='lg:w-1/2 pt-6 lg:pt-0 lg:text-justify'>
             <h3 className='uppercase text-xl text-rose-200'>ITIS - GIANCARLO VALLAURI</h3>
             <p>Graduates in Computer Science and Telecommunications have specific skills in the field of information
@@ -111,7 +111,7 @@ function About() {
             </p>
           </motion.div>
         </motion.div>
-      </motion.div>
+      </div>
     </div>
   )
 }
