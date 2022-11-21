@@ -1,11 +1,87 @@
 import develhope from '../assets/CertificatoDevelhope2M.png';
 import vallauri from '../assets/vallauri2.png';
+import tr1 from '../assets/triangle/tr1.png';
+import tr2 from '../assets/triangle/tr2.png'
+import tr3 from '../assets/triangle/tr3.png';
+import tr4 from '../assets/triangle/tr4.png'
+import cs3 from '../assets/triangle/cs3.png';
+import cs3t from '../assets/triangle/cs3T.png'
+import triangle2 from '../assets/triangle/triangle25M.png';
+import triangle3 from '../assets/triangle/triangle22M.png';
+
 import { motion } from 'framer-motion'
 import Skills from '../components/Skills';
 
 
 
 function About() {
+
+
+  return (
+    <div className='flex flex-col gap-48'>
+      <InfoCard
+        title={'about me'}
+        para={`My name is Christian Silvestri, I'm a Junior Full-Stack developer based in Rome.
+            Great lover of Music, Art and Astrophysics.
+            After working for years in the world of large-scale distribution and logistics, I decided to change my life by dedicating myself to
+            my greatest passion, web development, and luckily it turned out to be a wonderful decision.
+            Thanks to my work experiences I have acquired great skills in Problem Solving and a strong propensity to work in a team.
+            I use my passion and skills to create digital products and experences with high attention to detail.
+            you're looking for a developer to add to your team I'd love to hear from you.`}
+        logo={tr2}
+      />
+      <InfoCard
+        title={'carrer objective'}
+        para={`Full Stack graduate with a passion for developing scalable web applications and working across the full stack, to build complete web
+            applications including frontend, backend, and database management.
+            Creating solutions to clients' website needs seeking employment at SmartWeb where I can combine my experience in building web portals,
+            applications and ecommerce websites to bring unique attributes to the organization.
+            I am looking to join forces with Red Technologies to continue to grow my skill set while contributing to the positive outcome of making people
+            “richer, smarter and happier.`}
+        logo={tr3}
+      />
+      <div>
+        <InfoCard
+          title={'education'}
+          subTitle={'ITIS-GIANCARLO VALLAURI'}
+          para={`Graduates in Computer Science and Telecommunications have specific skills in the field of information
+            systems, information processing, Web applications and technologies, networks and communication equipment;
+            has skills and knowledge that address the analysis, design, installation and management of computer systems,
+            databases, networks of processing systems and multimedia systems`}
+          logo={tr1}
+        />
+        <InfoCard
+          title={'training'}
+          subTitle={'DEVELHOPE - FULLSTACK WEB DEVELOPER COURSE'}
+          para={` During the 8 months of Develhope course I learned development FullStack, with HTML, CSS, JAVASCRIPT, REACT and
+          NODE, to use Git and I acquired the skills needed on TypeScript.
+          In the second part I explored all the elements essential to developing software and I have developed a
+          true web application with agile methodologies`}
+          logo={tr4}
+        />
+      </div>
+    </div>
+  )
+}
+
+
+function InfoCard(props) {
+  return (
+    <div className='px-4 lg:px-12 xl:px-48 2xl:px-72 '>
+      <div className='flex justify-between w-full h-full items-end'>
+        <h1 className='text-9xl lg:text-9xl xl:text-10xl 2xl:text-11xl w-min'>{props.title}</h1>
+        <img src={props.logo} alt='' className='max-h-[100px] lg:max-h-[100px] xl:max-h-[130px] 2xl:min-h-[200px]' />
+      </div>
+      <div className='py-12 lg:w-2/3'>
+        <p className='text-xl 2xl:text-2xl'>
+          {props.subTitle}<br />{props.para}
+        </p>
+      </div>
+    </div>
+  )
+}
+
+/* function About() {
 
   const animation = {
     hidden: {
@@ -70,6 +146,9 @@ function About() {
             I use my passion and skills to create digital products and experences with high attention to detail.
             you're looking for a developer to add to your team I'd love to hear from you.
           </p>
+        </div>
+        <div>
+          <img src={triangle1} width='350px' alt='' />
         </div>
       </motion.div>
     )
@@ -143,7 +222,7 @@ function About() {
       </div>
     </div>
   )
-}
+} */
 
 
 

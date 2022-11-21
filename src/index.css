@@ -2,9 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
 @layer base {
   h1 {
-    @apply font-blucobra text-rose-500 text-9xl xl:text-10xl 2xl:text-11xl  /* lg:text-[190px] xl:text-[200px] 2xl:text-[210px]  */ 
+    @apply  text-rose-500 font-tusker uppercase
+  }
+  p {
+    @apply font-para3 font-black text-gray-200/80
+  }
+}
+/* @layer base {
+  h1 {
+    @apply font-blucobra text-rose-500 text-9xl xl:text-10xl 2xl:text-11xl 
   }
   p {
     @apply font-para text-lg xl:text-xl  leading-6 text-gray-300
@@ -12,7 +23,7 @@
   h2 {
     @apply font-blucobra text-rose-500 text-9xl lg:text-9xl xl:text-10xl 2xl:text-10xl
   }
-}
+} */
 
 @responsive {
   .md:title {
@@ -33,6 +44,16 @@
 }
 
 @font-face {
+  font-family: 'TUSKER';
+  src: url('../public/font/tusker/TuskerGrotesk-2600Semibold.ttf');
+}
+
+@font-face {
+  font-family: 'SEAWAVE';
+  src: url('../public/font/new/seawave/NT\ SEAWAVE\ \(standart\)\ -\ PERSONAL\ USE.otf');
+}
+
+@font-face {
   font-family: 'LOBSTER';
   src: url('../public/font/Michroma-Regular.ttf');
 }
@@ -40,12 +61,26 @@
   font-family: 'PARA';
   src: url('../public/font/Exo2-VariableFont_wght.ttf');
 }
-
+@font-face {
+  font-family: 'GUGI';
+  src: url('../public/font/Gugi-Regular.ttf');
+}
 @font-face {
   font-family: 'CHISATO';
   src: url('../public/font/new/ChisatoRegular.ttf');
 }
-
+@font-face {
+  font-family: 'CAVIAR';
+  src: url('../public/font/new/caviar/CaviarDreams.ttf');
+}
+@font-face {
+  font-family: 'NUGO';
+  src: url('../public/font/new/NugoSansLight.ttf');
+}
+@font-face {
+  font-family: 'VOLTAIRE';
+  src: url('../public/font/new/Voltaire-Regular.ttf');
+}
 @font-face {
   font-family: 'BLUCOBRA';
   src: url('../public/font/blue_cobra/BlueCobraExtraExpanded.otf');
@@ -53,7 +88,7 @@
 
 @font-face {
   font-family: 'TEST';
-  src: url('../public/font/new/seawave/NT\ SEAWAVE\ \(standart\)\ -\ PERSONAL\ USE.otf');
+  src: url('../public/font/new/Voltaire-Regular.ttf');
 }
 
 
@@ -97,10 +132,9 @@ textarea::placeholder {
 }
 
 .box {
-  height: 300px;
-  width: 300px;
-  background: rgb(169, 169, 169);
-  box-shadow: inset 10px 10px 18px 10px  rgba(228, 124, 124, 0.479) ,inset -10px -10px 18px 10px  rgba(228, 124, 124, 0.479), 0px 0px 20px 20px rgba(228, 124, 124, 0.479) ;
+
+  background: rgb(56, 56, 56);
+  box-shadow: inset 10px 10px 18px 10px blac ;
   border: none;
   
   border-radius: 16px;  

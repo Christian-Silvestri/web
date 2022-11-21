@@ -20,15 +20,21 @@ module.exports = {
     },
     extend: {
       fontFamily: {
+        'tusker' : ['TUSKER', 'sans-serif'],
+        'seawave': ['SEAWAVE', 'sans-serif'],
         'lobster': ['LOBSTER', 'sans-serif'],
         'para': ['PARA', 'sans-serif'],
+        'para2': ['GUGI', 'sans-serif'],
+        'para3': ['CAVIAR', 'sans-serif'],
+        'para4': ['NUGO', 'sans-serif'],
+        'para5': ['VOLTAIRE', 'sans-serif'],
         'chisato': ['CHISATO', 'sans-serif'],
         'blucobra': ['BLUCOBRA', 'sans-serif'],
         'test': ['TEST', 'sans-serif']
       },
       backgroundImage: {
         'collage': "url('./assets/collage.png')",
-        'webbo': "url('./assets/nasa/web15.jpg')",
+        'webbo': "url('./assets/triangle/cs3.png')",
       }
     },
     colors: ({ colors }) => ({

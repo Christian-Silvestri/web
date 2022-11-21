@@ -23,7 +23,7 @@ function App() {
         {/*  <Prova /> */}
         {/* <Prova /> */}
      {/*    <LogoCS /> */}
-     <LogoCS />
+    
         <About />
         
         {/* <Layout>
