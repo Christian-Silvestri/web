@@ -40,7 +40,7 @@ function About() {
             “richer, smarter and happier.`}
         logo={tr3}
       />
-      <div>
+      <div className='flex flex-col gap-12'>
         <InfoCard
           title={'education'}
          
@@ -70,9 +70,9 @@ function InfoCard(props) {
     <div className='px-4 lg:px-12 xl:px-48 2xl:px-72 '>
       <div className='flex justify-between w-full h-full items-end'>
         <h1 className='text-9xl lg:text-9xl xl:text-10xl 2xl:text-11xl w-min'>{props.title}</h1>
-        <img src={props.logo} alt='' className='max-h-[100px] lg:max-h-[100px] xl:max-h-[130px] 2xl:min-h-[200px]' />
+        <img src={props.logo} alt='' className='max-h-[80px] lg:max-h-[100px] xl:max-h-[130px] 2xl:min-h-[200px]' />
       </div>
-      <div className='pt-4 lg:w-2/3'>
+      <div className='pt-4 2xl:pt-8 lg:w-2/3'>
         <p className='text-xl 2xl:text-2xl'>
           {props.para}
         </p>
