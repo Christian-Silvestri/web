@@ -10,7 +10,7 @@
     @apply  text-rose-500 font-tusker uppercase
   }
   p {
-    @apply font-para3 font-black text-gray-200/80
+    @apply font-para3 font-black text-gray-200/80 
   }
 }
 /* @layer base {

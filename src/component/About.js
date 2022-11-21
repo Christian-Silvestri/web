@@ -18,7 +18,7 @@ function About() {
 
 
   return (
-    <div className='flex flex-col gap-48'>
+    <div className='pt-8 flex flex-col gap-48'>
       <InfoCard
         title={'about me'}
         para={`My name is Christian Silvestri, I'm a Junior Full-Stack developer based in Rome.
@@ -68,13 +68,13 @@ function About() {
 function InfoCard(props) {
   return (
     <div className='px-4 lg:px-12 xl:px-48 2xl:px-72 '>
-      <div className='flex justify-between w-full h-full items-end'>
-        <h1 className='text-9xl lg:text-9xl xl:text-10xl 2xl:text-11xl w-min'>{props.title}</h1>
+      <div className='flex justify-between w-full h-full items-center'>
+        <h1 className='pb-8 2xl:pb-14 text-9xl lg:text-9xl xl:text-10xl 2xl:text-11xl w-min'>{props.title}</h1>
         <img src={props.logo} alt='' className='max-h-[100px] lg:max-h-[100px] xl:max-h-[130px] 2xl:min-h-[200px]' />
       </div>
-      <div className='py-12 lg:w-2/3'>
+      <div className='pb-12  lg:w-2/3'>
         <p className='text-xl 2xl:text-2xl'>
-          {props.subTitle}<br />{props.para}
+          <div className=''>{props.subTitle}</div><br />{props.para}
         </p>
       </div>
     </div>
