@@ -18,7 +18,7 @@ function About() {
 
 
   return (
-    <div className='pt-8 flex flex-col gap-48'>
+    <div className='pt-8 flex flex-col gap-72'>
       <InfoCard
         title={'about me'}
         para={`My name is Christian Silvestri, I'm a Junior Full-Stack developer based in Rome.
@@ -43,8 +43,8 @@ function About() {
       <div>
         <InfoCard
           title={'education'}
-          subTitle={'ITIS-GIANCARLO VALLAURI'}
-          para={`Graduates in Computer Science and Telecommunications have specific skills in the field of information
+         
+          para={`ITIS-GIANCARLO VALLAURI. Graduates in Computer Science and Telecommunications have specific skills in the field of information
             systems, information processing, Web applications and technologies, networks and communication equipment;
             has skills and knowledge that address the analysis, design, installation and management of computer systems,
             databases, networks of processing systems and multimedia systems`}
@@ -52,8 +52,8 @@ function About() {
         />
         <InfoCard
           title={'training'}
-          subTitle={'DEVELHOPE - FULLSTACK WEB DEVELOPER COURSE'}
-          para={` During the 8 months of Develhope course I learned development FullStack, with HTML, CSS, JAVASCRIPT, REACT and
+      
+          para={`DEVELHOPE - FULLSTACK WEB DEVELOPER COURSE. During the 8 months of Develhope course I learned development FullStack, with HTML, CSS, JAVASCRIPT, REACT and
           NODE, to use Git and I acquired the skills needed on TypeScript.
           In the second part I explored all the elements essential to developing software and I have developed a
           true web application with agile methodologies`}
@@ -68,13 +68,13 @@ function About() {
 function InfoCard(props) {
   return (
     <div className='px-4 lg:px-12 xl:px-48 2xl:px-72 '>
-      <div className='flex justify-between w-full h-full items-center'>
-        <h1 className='pb-8 2xl:pb-14 text-9xl lg:text-9xl xl:text-10xl 2xl:text-11xl w-min'>{props.title}</h1>
+      <div className='flex justify-between w-full h-full items-end'>
+        <h1 className='text-9xl lg:text-9xl xl:text-10xl 2xl:text-11xl w-min'>{props.title}</h1>
         <img src={props.logo} alt='' className='max-h-[100px] lg:max-h-[100px] xl:max-h-[130px] 2xl:min-h-[200px]' />
       </div>
-      <div className='pb-12  lg:w-2/3'>
+      <div className='pt-4 lg:w-2/3'>
         <p className='text-xl 2xl:text-2xl'>
-          <div className=''>{props.subTitle}</div><br />{props.para}
+          {props.para}
         </p>
       </div>
     </div>
