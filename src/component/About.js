@@ -43,7 +43,7 @@ function About() {
       <div className='flex flex-col gap-12'>
         <InfoCard
           title={'education'}
-         
+
           para={`ITIS-GIANCARLO VALLAURI. Graduates in Computer Science and Telecommunications have specific skills in the field of information
             systems, information processing, Web applications and technologies, networks and communication equipment;
             has skills and knowledge that address the analysis, design, installation and management of computer systems,
@@ -52,7 +52,7 @@ function About() {
         />
         <InfoCard
           title={'training'}
-      
+
           para={`DEVELHOPE - FULLSTACK WEB DEVELOPER COURSE. During the 8 months of Develhope course I learned development FullStack, with HTML, CSS, JAVASCRIPT, REACT and
           NODE, to use Git and I acquired the skills needed on TypeScript.
           In the second part I explored all the elements essential to developing software and I have developed a
@@ -67,15 +67,22 @@ function About() {
 
 function InfoCard(props) {
   return (
-    <div className='px-4 lg:px-12 xl:px-48 2xl:px-72 '>
-      <div className='flex justify-between w-full h-full items-end'>
-        <h1 className='text-9xl lg:text-9xl xl:text-10xl 2xl:text-11xl w-min'>{props.title}</h1>
+    <div className='px-4 lg:px-12 xl:px-48  '>
+      {/* <div className='flex justify-between w-full h-full items-end'>
+        <h1 className='text-9xl lg:text-9xl xl:text-10xl 2xl:text-11xl  '>{props.title}</h1>
         <img src={props.logo} alt='' className='max-h-[80px] lg:max-h-[100px] xl:max-h-[130px] 2xl:min-h-[200px]' />
       </div>
       <div className='pt-4 2xl:pt-8 lg:w-2/3'>
         <p className='text-xl 2xl:text-2xl'>
           {props.para}
         </p>
+      </div> */}
+      <div className='flex h-full items-center justify-between'>
+        <div className='flex flex-col lg:w-2/3'>
+          <h1 className='text-9xl lg:text-9xl xl:text-10xl 2xl:text-11xl pb-4 2xl:pb-8'>{props.title}</h1>
+          <p className='text-md 2xl:text-2xl'>{props.para}</p>
+        </div>
+        <img src={props.logo} alt='' className='max-h-[80px] lg:max-h-[100px] xl:max-h-[130px] 2xl:min-h-[200px]' />
       </div>
     </div>
   )
