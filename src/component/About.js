@@ -115,7 +115,7 @@ function InfoCard(props) {
   }
 
   return (
-    <motion.div layout  transition={{staggerChildren: 0.9}} className='px-4 lg:pl-12 xl:pl-48 2xl:pl-72 h-screen landscape:h-full  md:landscape:h-screen md:portrait:h-full lg:portrait:h-full lg:landscape:h-screen   flex items-center justify-center  '>
+    <motion.div layout  transition={{staggerChildren: 0.9}} className='px-4 lg:pl-12 xl:pl-48 2xl:pl-72 h-screen landscape:h-full  md:landscape:h-screen md:portrait:h-screen lg:portrait:h-full lg:landscape:h-screen   flex items-center justify-center  '>
       <motion.div  className=''>
         <motion.h1 initial={'hidden'} whileInView={'visible'} viewport={{once: true, amount: 1 }} variants={animationTitle} className='text-9xl lg:text-9xl xl:text-10xl 2xl:text-11xl pb-4 2xl:pb-8'>{props.title}</motion.h1>
         <div className='flex items-center justify-between gap-4 md:gap-0'>
