@@ -74,7 +74,7 @@ function InfoCard(props) {
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.2,
         ease: 'linear',
         delay: 0.5
       }
@@ -93,24 +93,41 @@ function InfoCard(props) {
         duration: 0.2,
         ease: 'easeInOut',
         delay: 0.5
+        
+      }
+    }
+  }
+
+  const animationLogo = {
+    hidden: {
+      rotate: 180,
+      
+    },
+    visible: {
+      rotate: 360,
+      
+      transition: {
+        duration: 1,
+        
+        ease: 'easeInOut'
       }
     }
   }
 
   return (
-    <div className='px-4 lg:pl-12 xl:pl-48 2xl:pl-72 h-screen flex items-center justify-center  '>
-      <motion.div layout  transition={{staggerChildren: 0.5}} className=''>
+    <motion.div layout  transition={{staggerChildren: 0.9}} className='px-4 lg:pl-12 xl:pl-48 2xl:pl-72 h-screen flex items-center justify-center  '>
+      <motion.div  className=''>
         <motion.h1 initial={'hidden'} whileInView={'visible'} viewport={{once: true, amount: 1 }} variants={animationTitle} className='text-9xl lg:text-9xl xl:text-10xl 2xl:text-11xl pb-4 2xl:pb-8'>{props.title}</motion.h1>
         <div className='flex items-center justify-between gap-4 md:gap-0'>
           <motion.div initial={'hidden'} whileInView={'visible'} viewport={{ once: true, amount: 1 }} variants={animation} className='w-[80%] md:w-[60%] 2xl:w-[50%]'>
             <p className='text-md lg:text:xl 2xl:text-xl'>{props.para}</p>
           </motion.div>
-          <div className='md:w-[40%] 2xl:w-[50%] flex justify-center'>
-            <img src={props.logo} alt='' className='max-h-[80px] lg:max-h-[100px] xl:max-h-[100px] 2xl:min-h-[150px]' />
-          </div>
+          <motion.div initial={'hidden'} whileInView={'visible'} viewport={{once: true, amount: 0.5}} transition={{staggerChildren: 0.9}} className='md:w-[40%] 2xl:w-[50%] flex justify-center'>
+            <motion.img variants={animationLogo} src={props.logo} alt='' className='max-h-[80px] lg:max-h-[100px] xl:max-h-[100px] 2xl:min-h-[150px]' />
+          </motion.div>
         </div>
       </motion.div>
-    </div>
+    </motion.div>
   )
 }
 
