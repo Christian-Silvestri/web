@@ -18,7 +18,7 @@ function About() {
 
 
   return (
-    <div className=' flex flex-col lg:gap-0 lg:pt-0'>
+    <div className='landscape:space-y-12 flex flex-col '>
       <InfoCard
         title={'about me'}
         para={`My name is Christian Silvestri, I'm a Junior Full-Stack developer based in Rome.
@@ -40,7 +40,7 @@ function About() {
             “richer, smarter and happier.`}
         logo={tr3}
       />
-      {/* <div className='flex flex-col gap-12'> */}
+      
       <InfoCard
         title={'education'}
 
@@ -59,7 +59,7 @@ function About() {
           true web application with agile methodologies`}
         logo={tr4}
       />
-      {/* </div> */}
+      
     </div>
   )
 }
@@ -115,7 +115,7 @@ function InfoCard(props) {
   }
 
   return (
-    <motion.div layout  transition={{staggerChildren: 0.9}} className='px-4 lg:pl-12 xl:pl-48 2xl:pl-72 h-screen landscape:h-full  md:landscape:h-screen md:portrait:h-screen lg:portrait:h-full lg:landscape:h-screen   flex items-center justify-center  '>
+    <motion.div layout  transition={{staggerChildren: 0.9}} className='px-4 lg:pl-12 xl:pl-48 2xl:pl-72 h-screen landscape:h-full   sm:landscape:h-full sm:portrait:h-screen lg:portrait:h-screen lg:landscape:h-screen flex items-center justify-center  '>
       <motion.div  className=''>
         <motion.h1 initial={'hidden'} whileInView={'visible'} viewport={{once: true, amount: 1 }} variants={animationTitle} className='text-9xl lg:text-9xl xl:text-10xl 2xl:text-11xl pb-4 2xl:pb-8'>{props.title}</motion.h1>
         <div className='flex items-center justify-between gap-4 md:gap-0'>
