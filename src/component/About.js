@@ -40,7 +40,7 @@ function About() {
             “richer, smarter and happier.`}
         logo={tr3}
       />
-      <div className='flex flex-col gap-12'>
+      {/* <div className='flex flex-col gap-12'> */}
         <InfoCard
           title={'education'}
 
@@ -59,31 +59,40 @@ function About() {
           true web application with agile methodologies`}
           logo={tr4}
         />
-      </div>
+      {/* </div> */}
     </div>
   )
 }
 
 
 function InfoCard(props) {
+
+  const animation = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        ease: 'linear'
+      }
+    }
+  }
+
   return (
-    <div className='px-4 lg:px-12 xl:px-48  '>
-      {/* <div className='flex justify-between w-full h-full items-end'>
-        <h1 className='text-9xl lg:text-9xl xl:text-10xl 2xl:text-11xl  '>{props.title}</h1>
-        <img src={props.logo} alt='' className='max-h-[80px] lg:max-h-[100px] xl:max-h-[130px] 2xl:min-h-[200px]' />
-      </div>
-      <div className='pt-4 2xl:pt-8 lg:w-2/3'>
-        <p className='text-xl 2xl:text-2xl'>
-          {props.para}
-        </p>
-      </div> */}
-      <div className='flex h-full items-center justify-between'>
-        <div className='flex flex-col lg:w-2/3'>
-          <h1 className='text-9xl lg:text-9xl xl:text-10xl 2xl:text-11xl pb-4 2xl:pb-8'>{props.title}</h1>
-          <p className='text-md 2xl:text-2xl'>{props.para}</p>
+    <div className='px-4 lg:pl-12 xl:pl-48 2xl:pl-72  '>
+      <motion.div initial={'hidden'} whileInView={'visible'} viewport={{once: false, amount: 0.5 }} variants={animation} className=''>
+        <h1 className='text-9xl lg:text-9xl xl:text-10xl 2xl:text-11xl pb-4 2xl:pb-8'>{props.title}</h1>
+        <div className='flex items-center justify-between gap-4 md:gap-0'>
+          <div className='w-[80%] md:w-[60%] 2xl:w-[50%]'>
+            <p className='text-md lg:text:xl 2xl:text-xl'>{props.para}</p>
+          </div>
+          <div className='md:w-[40%] 2xl:w-[50%] flex justify-center'>
+            <img src={props.logo} alt='' className='max-h-[80px] lg:max-h-[100px] xl:max-h-[100px] 2xl:min-h-[150px]' />
+          </div>
         </div>
-        <img src={props.logo} alt='' className='max-h-[80px] lg:max-h-[100px] xl:max-h-[130px] 2xl:min-h-[200px]' />
-      </div>
+      </motion.div>
     </div>
   )
 }
