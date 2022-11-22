@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.6b9f27a5.css",
-    "main.js": "/web/static/js/main.c5ddde59.js",
+    "main.css": "/web/static/css/main.222bb465.css",
+    "main.js": "/web/static/js/main.194f4f3b.js",
     "static/media/Gugi-Regular.ttf": "/web/static/media/Gugi-Regular.e4e242ff3ba08f9fe398.ttf",
     "static/media/triangle22M.png": "/web/static/media/triangle22M.9bc109eb396a53ee5bd6.png",
     "static/media/Exo2-VariableFont_wght.ttf": "/web/static/media/Exo2-VariableFont_wght.718ec91358aa7ee8083b.ttf",
@@ -24,11 +24,11 @@
     "static/media/tr1.png": "/web/static/media/tr1.63c0c1874d1ebdedadf1.png",
     "static/media/vallauri2.png": "/web/static/media/vallauri2.03bbfd678324835dd40e.png",
     "index.html": "/web/index.html",
-    "main.6b9f27a5.css.map": "/web/static/css/main.6b9f27a5.css.map",
-    "main.c5ddde59.js.map": "/web/static/js/main.c5ddde59.js.map"
+    "main.222bb465.css.map": "/web/static/css/main.222bb465.css.map",
+    "main.194f4f3b.js.map": "/web/static/js/main.194f4f3b.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b9f27a5.css",
-    "static/js/main.c5ddde59.js"
+    "static/css/main.222bb465.css",
+    "static/js/main.194f4f3b.js"
   ]
 }
