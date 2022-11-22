@@ -140,6 +140,10 @@ textarea::placeholder {
   border-radius: 16px;  
 }
 
+.filter {
+  filter: drop-shadow(2px 2px 2px white);
+}
+
 
 
 

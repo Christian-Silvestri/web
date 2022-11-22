@@ -18,7 +18,7 @@ function About() {
 
 
   return (
-    <div className='pt-8 flex flex-col gap-72'>
+    <div className=' flex flex-col lg:gap-0 lg:pt-0'>
       <InfoCard
         title={'about me'}
         para={`My name is Christian Silvestri, I'm a Junior Full-Stack developer based in Rome.
@@ -41,24 +41,24 @@ function About() {
         logo={tr3}
       />
       {/* <div className='flex flex-col gap-12'> */}
-        <InfoCard
-          title={'education'}
+      <InfoCard
+        title={'education'}
 
-          para={`ITIS-GIANCARLO VALLAURI. Graduates in Computer Science and Telecommunications have specific skills in the field of information
+        para={`ITIS-GIANCARLO VALLAURI. Graduates in Computer Science and Telecommunications have specific skills in the field of information
             systems, information processing, Web applications and technologies, networks and communication equipment;
             has skills and knowledge that address the analysis, design, installation and management of computer systems,
             databases, networks of processing systems and multimedia systems`}
-          logo={tr1}
-        />
-        <InfoCard
-          title={'training'}
+        logo={tr1}
+      />
+      <InfoCard
+        title={'training'}
 
-          para={`DEVELHOPE - FULLSTACK WEB DEVELOPER COURSE. During the 8 months of Develhope course I learned development FullStack, with HTML, CSS, JAVASCRIPT, REACT and
+        para={`DEVELHOPE - FULLSTACK WEB DEVELOPER COURSE. During the 8 months of Develhope course I learned development FullStack, with HTML, CSS, JAVASCRIPT, REACT and
           NODE, to use Git and I acquired the skills needed on TypeScript.
           In the second part I explored all the elements essential to developing software and I have developed a
           true web application with agile methodologies`}
-          logo={tr4}
-        />
+        logo={tr4}
+      />
       {/* </div> */}
     </div>
   )
@@ -74,20 +74,37 @@ function InfoCard(props) {
     visible: {
       opacity: 1,
       transition: {
-        duration: 1,
-        ease: 'linear'
+        duration: 0.5,
+        ease: 'linear',
+        delay: 0.5
+      }
+    }
+  }
+
+  const animationTitle = {
+    hidden: {
+      opacity: 0,
+      scaleY: 0
+    },
+    visible: {
+      opacity: 1,
+      scaleY: 1,
+      transition: {
+        duration: 0.2,
+        ease: 'easeInOut',
+        delay: 0.5
       }
     }
   }
 
   return (
-    <div className='px-4 lg:pl-12 xl:pl-48 2xl:pl-72  '>
-      <motion.div initial={'hidden'} whileInView={'visible'} viewport={{once: false, amount: 0.5 }} variants={animation} className=''>
-        <h1 className='text-9xl lg:text-9xl xl:text-10xl 2xl:text-11xl pb-4 2xl:pb-8'>{props.title}</h1>
+    <div className='px-4 lg:pl-12 xl:pl-48 2xl:pl-72 h-screen flex items-center justify-center  '>
+      <motion.div layout  transition={{staggerChildren: 0.5}} className=''>
+        <motion.h1 initial={'hidden'} whileInView={'visible'} viewport={{once: true, amount: 1 }} variants={animationTitle} className='text-9xl lg:text-9xl xl:text-10xl 2xl:text-11xl pb-4 2xl:pb-8'>{props.title}</motion.h1>
         <div className='flex items-center justify-between gap-4 md:gap-0'>
-          <div className='w-[80%] md:w-[60%] 2xl:w-[50%]'>
+          <motion.div initial={'hidden'} whileInView={'visible'} viewport={{ once: true, amount: 1 }} variants={animation} className='w-[80%] md:w-[60%] 2xl:w-[50%]'>
             <p className='text-md lg:text:xl 2xl:text-xl'>{props.para}</p>
-          </div>
+          </motion.div>
           <div className='md:w-[40%] 2xl:w-[50%] flex justify-center'>
             <img src={props.logo} alt='' className='max-h-[80px] lg:max-h-[100px] xl:max-h-[100px] 2xl:min-h-[150px]' />
           </div>
