@@ -7,23 +7,13 @@
 
 @layer base {
   h1 {
-    @apply  text-rose-500 font-tusker uppercase
+    @apply  text-rose-500/80 md:text-rose-500 font-tusker uppercase text-9xl lg:text-10xl xl:text-11xl 2xl:text-[350px];
   }
   p {
-    @apply font-para3 font-black text-gray-200/80 
+    @apply font-para3 font-black text-gray-100/80  lg:text-lg 2xl:text-xl;
   }
 }
-/* @layer base {
-  h1 {
-    @apply font-blucobra text-rose-500 text-9xl xl:text-10xl 2xl:text-11xl 
-  }
-  p {
-    @apply font-para text-lg xl:text-xl  leading-6 text-gray-300
-  }
-  h2 {
-    @apply font-blucobra text-rose-500 text-9xl lg:text-9xl xl:text-10xl 2xl:text-10xl
-  }
-} */
+
 
 @responsive {
   .md:title {
@@ -88,7 +78,7 @@
 
 @font-face {
   font-family: 'TEST';
-  src: url('../public/font/new/Voltaire-Regular.ttf');
+  src: url('../public/font/bogart/Bogart-Black-trial.ttf');
 }
 
 
