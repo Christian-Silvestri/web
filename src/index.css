@@ -7,31 +7,16 @@
 
 @layer base {
   h1 {
-    @apply  text-rose-500/80 md:text-rose-500 font-tusker uppercase text-9xl lg:text-10xl xl:text-11xl 2xl:text-[350px];
+    @apply text-rose-500/80 md:text-rose-500 font-tusker uppercase text-9xl lg:text-10xl xl:text-11xl 2xl:text-[350px];
   }
+
   p {
-    @apply font-para3 font-black text-gray-100/80  lg:text-lg 2xl:text-xl;
+    @apply font-para3 font-black text-gray-100/80 lg:text-lg 2xl:text-xl;
   }
 }
 
 
-@responsive {
-  .md:title {
-  
-  }
-}
-@layer utilities {
-  
-  .title {
-    @apply text-white text-9xl font-blucobra 
-  }
-  .subtitle {
-    @apply text-white text-6xl font-blucobra
-  }
-  .para {
-    @apply leading-6 text-xl  text-blue-100/80 font-para
-  }
-}
+
 
 @font-face {
   font-family: 'TUSKER';
@@ -47,30 +32,37 @@
   font-family: 'LOBSTER';
   src: url('../public/font/Michroma-Regular.ttf');
 }
+
 @font-face {
   font-family: 'PARA';
   src: url('../public/font/Exo2-VariableFont_wght.ttf');
 }
+
 @font-face {
   font-family: 'GUGI';
   src: url('../public/font/Gugi-Regular.ttf');
 }
+
 @font-face {
   font-family: 'CHISATO';
   src: url('../public/font/new/ChisatoRegular.ttf');
 }
+
 @font-face {
   font-family: 'CAVIAR';
   src: url('../public/font/new/caviar/CaviarDreams.ttf');
 }
+
 @font-face {
   font-family: 'NUGO';
   src: url('../public/font/new/NugoSansLight.ttf');
 }
+
 @font-face {
   font-family: 'VOLTAIRE';
   src: url('../public/font/new/Voltaire-Regular.ttf');
 }
+
 @font-face {
   font-family: 'BLUCOBRA';
   src: url('../public/font/blue_cobra/BlueCobraExtraExpanded.otf');
@@ -88,10 +80,11 @@
 
 @media only screen and (max-width: 896px) {
   html {
-    
+
     overflow-y: scroll;
-    
+
   }
+
   ::-webkit-scrollbar {
     display: none;
   }
@@ -101,9 +94,9 @@ input::placeholder {
   font-weight: bold;
   opacity: .3;
   color: darkgray;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-  
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
+
 textarea::placeholder {
   font-weight: bold;
   opacity: 0.3;
@@ -117,33 +110,109 @@ textarea::placeholder {
 
 
 
-.textShadow {
-  text-shadow: 4px 0px 8px  ;
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+
 }
 
-.box {
-
-  background: rgb(56, 56, 56);
-  box-shadow: inset 10px 10px 18px 10px blac ;
-  border: none;
-  
-  border-radius: 16px;  
+.wrapper {
+  /* padding: 5rem; */
+  position: relative;
+  padding: 15px;
 }
 
-.filter {
-  filter: drop-shadow(2px 2px 2px white);
+.title {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 250px;
+  height: 400px;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+}
+
+.card:hover>*:first-child {
+  transform: rotateY(180deg);
+
+}
+
+.card:hover>*:last-child {
+  transform: rotateY(0deg);
+  box-shadow: -5px 5px 4px darkgray;
+  border-top: 1px solid rgb(68, 68, 68);
+  border-right: 1px solid rgb(68, 68, 68);
+}
+
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  box-shadow: 5px 5px 4px darkgray;
+  border-top: 1px solid rgb(68, 68, 68);
+  border-left: 1px solid rgb(68, 68, 68);
+}
+
+.button-border {
+  box-shadow: 2px 2px 4px darkgray;
+  border-top: 1px solid rgb(68, 68, 68);
+  border-left: 1px solid rgb(68, 68, 68);
+}
+
+.card-content {
+  position: relative;
+  height: auto;
+  /*overflow-wrap: anywhere;*/
+}
+
+.card-footer {
+  padding: 10px 15px;
+  width: 100%;
+  position: relative;
+  margin-top: auto;
+}
+
+.button {
+  padding: .75rem 1.25rem;
+  background: rgb(53, 52, 52);
+  color: white;
+  border-radius: 1.25rem;
+  text-align: center;
+}
+
+.card .card-inner {
+  position: absolute;
+  border-radius: 2rem;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: transform 0.5s;
+}
+ 
+
+.card>.card-front {
+  z-index: 10;
 }
 
 
 
+.card>.card-back {
+  transform: rotateY(-180deg);
+}
 
 
-/* .CS-gradient {
-  
-  background: -webkit-linear-gradient(#14b8a6, #14b8a593, #14b8a58c );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
+.card-back .card-content {
+  margin-top: auto;
+}
 
-
-
+.filtero {
+  filter: drop-shadow(2px 1px 2px darkgray);
+}

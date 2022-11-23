@@ -1,6 +1,6 @@
 import {
   SiReact, SiFlutter, SiMongodb, SiPostgresql, SiPrisma, SiExpress,
-  SiNodedotjs, SiTailwindcss, SiWebpack, SiFigma, SiFramer
+  SiNodedotjs, SiTailwindcss, SiWebpack, SiFigma, SiFramer, SiTypescript, SiJavascript
 } from 'react-icons/si';
 import { TbBrandCss3, TbBrandGit, TbBrandBootstrap, TbBrandHtml5 } from 'react-icons/tb';
 import { FaSass } from 'react-icons/fa';
@@ -11,7 +11,8 @@ import { ImLoop2 } from 'react-icons/im';
 import { SlSocialLinkedin, SlSocialGithub } from 'react-icons/sl';
 import { VscMail } from 'react-icons/vsc';
 import { BsTelephone } from 'react-icons/bs';
-import { FiExternalLink } from 'react-icons/fi'
+import { FiExternalLink } from 'react-icons/fi';
+import { DiPhotoshop } from 'react-icons/di';
 
 
 
@@ -27,7 +28,17 @@ export const icon = [
       image hyperlink to somewhere else, can italicize words, can make the font bigger or smaller, and so on.</span>,
     iconXl: <TbBrandHtml5 size={100} />,
     iconXs: <TbBrandHtml5 size={35} />,
-    link: <a href='https://developer.mozilla.org/en-US/docs/Web/HTML' target='_blanck' alt='HTML - mdn web docs'>view more</a>
+    link:
+      <a
+        href='https://developer.mozilla.org/en-US/docs/Web/HTML'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='HTML - mdn web docs'
+      >
+        <div className='hidden xl:block'>
+          <TbBrandHtml5 size={35} />
+        </div> read more
+      </a>
   },
   {
     id: 2,
@@ -40,7 +51,18 @@ export const icon = [
       the basics of how it works, what the syntax looks like, and how you can start using it to add styling to HTML.</span>,
     iconXl: <TbBrandCss3 size={100} />,
     iconXs: <TbBrandCss3 size={35} />,
-    link: <a href='https://developer.mozilla.org/en-US/docs/Web/CSS' target='_blanck' alt='CSS - MDN-web-docs'>view more</a>
+    link:
+      <a
+        href='https://developer.mozilla.org/en-US/docs/Web/CSS'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='CSS - MDN-web-docs'
+      >
+        <div className='hidden xl:block'>
+          <TbBrandCss3 size={35} />
+        </div>
+        read more
+      </a>
   },
   {
     id: 3,
@@ -50,7 +72,18 @@ export const icon = [
       fully CSS-compatible syntax.<br />Sass helps keep large stylesheets well-organized and makes it easy to share design within and across projects.</span>,
     iconXl: <FaSass size={100} />,
     iconXs: <FaSass size={35} />,
-    link: <a href='https://sass-lang.com/' target='_blanck' alt='SASS - Home Page'>view more</a>
+    link:
+      <a
+        href='https://sass-lang.com/'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='SASS - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <FaSass size={35} />
+        </div>
+        read more
+      </a>
   },
   {
     id: 4,
@@ -59,9 +92,20 @@ export const icon = [
       scripting language for Web pages, but it's used in many non-browser environments as well<br /><br />
       JavaScript runs on the client side of the web, which can be used to design / program how the web pages behave on the occurrence of an event.
       JavaScript is an easy to learn and also powerful scripting language, widely used for controlling web page behavior.</span>,
-    iconXl: <h1 className='uppercase text-rose-500/90 font-semibold text-9xl'>j<span className='text-7xl'>s</span></h1>,
-    iconXs: <h1 className='uppercase text-rose-500/90 font-semibold text-3xl tracking-tighter '>j<span className='text-xl'>s</span></h1>,
-    link: <a href='https://www.javascript.com/' target='_blanck' alt='JAVASCRIPT - Home Page'>view more</a>
+    iconXl: <SiJavascript size={100} />,
+    iconXs: <SiJavascript size={35} />,
+    link:
+      <a
+        href='https://www.javascript.com/'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='JAVASCRIPT - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <SiJavascript size={35} />
+        </div>
+        read more
+      </a>
   },
   {
     id: 5,
@@ -69,9 +113,20 @@ export const icon = [
     content: <span>TypeScript is like an extension or "superset" of JavaScript. Since JavaScript is a loosely typed language,
       TypeScript enforces the strict use of types. Thus, making it a strictly typed language.<br />TypeScript takes all the functionalities and
       structures JavaScript provides as a language, and adds a few things to that.</span>,
-    iconXl: <h1 className='uppercase text-rose-500/90 font-smibold text-9xl tracking-tighter'>t<span className='text-7xl'>s</span></h1>,
-    iconXs: <h1 className='uppercase text-rose-500/90 font-smibold text-3xl tracking-tighter'>t<span className='text-xl'>s</span></h1>,
-    link: <a href='https://www.typescriptlang.org/' target='_blanck' alt='TYPESCRIPT - Home Page'>view more</a>
+    iconXl: <SiTypescript size={100} />,
+    iconXs: <SiTypescript size={35} />,
+    link:
+      <a
+        href='https://www.typescriptlang.org/'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='TYPESCRIPT - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <SiTypescript size={35} />
+        </div>
+        read more
+      </a>
   },
   {
     id: 6,
@@ -83,7 +138,18 @@ export const icon = [
       as certain client-side functionality</span>,
     iconXl: <SiReact size={100} />,
     iconXs: <SiReact size={35} />,
-    link: <a href='https://reactjs.org/' target='_blanck' alt='REACT - Home Page'>view more</a>
+    link:
+      <a
+        href='https://reactjs.org/'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='REACT - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <SiReact size={35} />
+        </div>
+        read more
+      </a>
   },
   {
     id: 7,
@@ -95,7 +161,18 @@ export const icon = [
       world, and maintained by a community of global developers</span>,
     iconXl: <SiFlutter size={100} />,
     iconXs: <SiFlutter size={35} />,
-    link: <a href='https://flutter.dev/' target='_blanck' alt='FLUTTER - Home Page'>view more</a>
+    link:
+      <a
+        href='https://flutter.dev/'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='FLUTTER - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <SiFlutter size={35} />
+        </div>
+        read more
+      </a>
   },
   {
     id: 8,
@@ -109,7 +186,18 @@ export const icon = [
       as well as for real-time Web applications.</span>,
     iconXl: <SiNodedotjs size={100} />,
     iconXs: <SiNodedotjs size={35} />,
-    link: <a href='https://nodejs.org/en/' target='_blanck' alt='NODEJS - Home Page'>view more</a>
+    link:
+      <a
+        href='https://nodejs.org/en/'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='NODEJS - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <SiNodedotjs size={35} />
+        </div>
+        read more
+      </a>
   },
   {
     id: 9,
@@ -121,7 +209,18 @@ export const icon = [
       developers interact with npm.<br /> The registry is a large public database of JavaScript software and the meta-information surrounding it.</span>,
     iconXl: <IoLogoNpm size={100} />,
     iconXs: <IoLogoNpm size={35} />,
-    link: <a href='https://www.npmjs.com/' target='_blanck' alt='NPM - Home Page'>view more</a>
+    link:
+      <a
+        href='https://www.npmjs.com/'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='NPM - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <IoLogoNpm size={35} />
+        </div>
+        read more
+      </a>
   },
   {
     id: 10,
@@ -132,7 +231,18 @@ export const icon = [
       (thousands of parallel branches running on different systems).</span>,
     iconXl: <TbBrandGit size={100} />,
     iconXs: <TbBrandGit size={35} />,
-    link: <a href='https://git-scm.com/' target='_blanck' alt='GIT - Home Page'>view more</a>
+    link:
+      <a
+        href='https://git-scm.com/'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='GIT - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <TbBrandGit size={35} />
+        </div>
+        read more
+      </a>
   },
   {
     id: 11,
@@ -145,7 +255,18 @@ export const icon = [
       bundling files together.</span>,
     iconXl: <SiWebpack size={100} />,
     iconXs: <SiWebpack size={35} />,
-    link: <a href='https://webpack.js.org/' target='_blanck' alt='WEBPACK - Home Page'>view more</a>
+    link:
+      <a
+        href='https://webpack.js.org/'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='WEBPACK - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <SiWebpack size={35} />
+        </div>
+        read more
+      </a>
   },
   {
     id: 12,
@@ -155,7 +276,18 @@ export const icon = [
       web application features, without obscuring Node.js features that you know and love.</span>,
     iconXl: <SiExpress size={100} />,
     iconXs: <SiExpress size={35} />,
-    link: <a href='https://expressjs.com/' target='_blanck' alt='EXPRESS - Home Page'>view more</a>
+    link:
+      <a
+        href='https://expressjs.com/'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='EXPRESS - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <SiExpress size={35} />
+        </div>
+        read more
+      </a>
   },
   {
     id: 13,
@@ -165,7 +297,18 @@ export const icon = [
       another database access tool such as SQL query builders or ORMs.</span>,
     iconXl: <SiPrisma size={100} />,
     iconXs: <SiPrisma size={35} />,
-    link: <a href='https://www.prisma.io/' target='_blanck' alt='PRISMA - Home Page'>view more</a>
+    link:
+      <a
+        href='https://www.prisma.io/'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='PRISMA - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <SiPrisma size={35} />
+        </div>
+        read more
+      </a>
   },
   {
     id: 14,
@@ -176,7 +319,18 @@ export const icon = [
       MongoDB's nature perfectly. You need your data fast and easily accessible. Use MongoDB when you're running performance-critical applications</span>,
     iconXl: <SiMongodb size={100} />,
     iconXs: <SiMongodb size={35} />,
-    link: <a href='https://www.mongodb.com/' target='_blanck' alt='MONGODB - Home Page'>view more</a>
+    link:
+      <a
+        href='https://www.mongodb.com/'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='MONGODB - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <SiMongodb size={35} />
+        </div>
+        read more
+      </a>
   },
   {
     id: 15,
@@ -188,7 +342,18 @@ export const icon = [
       It is no surprise that PostgreSQL has become the open source relational database of choice for many people and organisations.</span>,
     iconXl: <SiPostgresql size={100} />,
     iconXs: <SiPostgresql size={35} />,
-    link: <a href='https://www.postgresql.org/' target='_blanck' alt='POSTGRESQL - Home Page'>view more</a>
+    link:
+      <a
+        href='https://www.postgresql.org/'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='POSTGRESQL - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <SiPostgresql size={35} />
+        </div>
+        read more
+      </a>
   },
   {
     id: 16,
@@ -199,7 +364,18 @@ export const icon = [
       shadows, and more to create a completely custom component design — without leaving your HTML or writing a single line of custom CSS.</span>,
     iconXl: <SiTailwindcss size={100} />,
     iconXs: <SiTailwindcss size={35} />,
-    link: <a href='https://tailwindcss.com/' target='_blanck' alt='TAILWINDCSS - Home Page'>view more</a>
+    link:
+      <a
+        href='https://tailwindcss.com/'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='TAILWINDCSS - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <SiTailwindcss size={35} />
+        </div>
+        read more
+      </a>
   },
   {
     id: 17,
@@ -211,7 +387,18 @@ export const icon = [
       further customize the appearance of their contents.</span>,
     iconXl: <TbBrandBootstrap size={100} />,
     iconXs: <TbBrandBootstrap size={35} />,
-    link: <a href='https://getbootstrap.com/' target='_blanck' alt='BOOTSTRAP - Home Page'>view more</a>
+    link:
+      <a
+        href='https://getbootstrap.com/'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='BOOTSTRAP - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <TbBrandBootstrap size={35} />
+        </div>
+        read more
+      </a>
   },
   {
     id: 18,
@@ -222,7 +409,18 @@ export const icon = [
       capabilities. </span>,
     iconXl: <SiFramer size={100} />,
     iconXs: <SiFramer size={35} />,
-    link: <a href='https://www.framer.com/motion/' target='_blanck' alt='FRAMER MOTION - Home Page'>view more</a>
+    link:
+      <a
+        href='https://www.framer.com/motion/'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='FRAMER MOTION - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <SiFramer size={35} />
+        </div>
+        read more
+      </a>
   },
   {
     id: 19,
@@ -232,7 +430,18 @@ export const icon = [
       Unlike other UI design programs, such as Adobe XD, Figma is a web app, allowing anyone with an Internet browser and an account to use the tool.</span>,
     iconXl: <SiFigma size={100} />,
     iconXs: <SiFigma size={35} />,
-    link: <a href='https://www.figma.com/' target='_blanck' alt='FIGMA - Home Page'>view more</a>
+    link:
+      <a
+        href='https://www.figma.com/'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='FIGMA - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <SiFigma size={35} />
+        </div>
+        read more
+      </a>
   },
   {
     id: 20,
@@ -240,9 +449,20 @@ export const icon = [
     content: <span>Adobe Photoshop is software that is extensively used for raster image editing, graphic design and digital art. It makes use of layering to
       allow for depth and flexibility in the design and editing process, as wellas provide powerful editing tools, that when combined, are capable of just
       about anything.</span>,
-    iconXl: <h1 className='uppercase text-rose-500/90 font-semibold text-9xl '>p<span className='text-7xl'>s</span></h1>,
-    iconXs: <h1 className='uppercase text-rose-500/90 font-semibold text-3xl tracking-tighter'>p<span className='text-xl'>s</span></h1>,
-    link: <a href='https://www.adobe.com/products/photoshop.html' target='_blanck' alt='ADOBE PHOTOSHOP - Home Page'>view more</a>
+    iconXl: <DiPhotoshop size={100} />,
+    iconXs: <DiPhotoshop size={35} />,
+    link:
+      <a
+        href='https://www.adobe.com/products/photoshop.html'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='ADOBE PHOTOSHOP - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <DiPhotoshop size={35} />
+        </div>
+        read more
+      </a>
   },
   {
     id: 21,
@@ -252,17 +472,39 @@ export const icon = [
       and edit their site content</span>,
     iconXl: <VscGithub size={100} />,
     iconXs: <VscGithub size={35} />,
-    link: <a href='https://github.com/' target='_blanck' alt='GITHUB - Home Page'>view more</a>
+    link:
+      <a
+        href='https://github.com/'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='GITHUB - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <VscGithub size={35} />
+        </div>
+        read more
+      </a>
   },
   {
     id: 22,
     name: 'trello',
     content: <span>Trello is a collaborative work management app designed to track team projects, highlight tasks underway, show who they are assigned to,
       and detail progress towards completion. At its core, Trello relies on the principles of Kanban project boards to visualize workflows, providing
-      managers and team members with a simple overview of a project from start to finish</span>,
+      managers and team members with a simple overread of a project from start to finish</span>,
     iconXl: <CgTrello size={100} />,
     iconXs: <CgTrello size={35} />,
-    link: <a href='https://trello.com/' target='_blanck' alt='TRELLO - Home Page'>view more</a>
+    link:
+      <a
+        href='https://trello.com/'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='TRELLO - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <CgTrello size={35} />
+        </div>
+        read more
+      </a>
   },
 
   {
@@ -273,7 +515,18 @@ export const icon = [
       increments. Requirements, plans, and results are evaluated continuously so teams have a natural mechanism for responding to change quickly. </span>,
     iconXl: <ImLoop2 size={100} />,
     iconXs: <ImLoop2 size={35} />,
-    link: <a href='https://www.atlassian.com/agile' target='_blanck' alt='AGILE METHODOLOGY - Information Page'>view more</a>
+    link:
+      <a
+        href='https://www.atlassian.com/agile'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='AGILE METHODOLOGY - Information Page'
+      >
+        <div className='hidden xl:block'>
+          <ImLoop2 size={35} />
+        </div>
+        read more
+      </a>
   },
 ];
 

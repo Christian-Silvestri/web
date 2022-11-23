@@ -5,7 +5,7 @@ import tr4 from '../assets/triangle/tr4.png'
 
 
 import { motion } from 'framer-motion'
-import Skills from '../components/Skills';
+
 
 
 
@@ -150,7 +150,7 @@ function InfoCard(props) {
   const style = {
     display: {
       screen: ' flex items-center justify-center h-screen landscape:h-full sm:landscape:h-full sm:portrait:h-screen lg:portrait:h-screen lg:landscape:h-screen ',
-      padding: ' px-4 lg:pl-12 xl:pl-48 2xl:pl-72 '
+      padding: ' px-4  md:px-8 lg:pl-12 xl:pl-48 2xl:pl-72 '
     },
   };
 
@@ -158,17 +158,21 @@ function InfoCard(props) {
 
 
   return (
+
     <motion.div
       className={`${Object.values(style.display)} `}
       layout transition={{ staggerChildren: 0.9 }}
     >
+
       <motion.div>
+
         <motion.h1
           className={`pb-4 lg:pb-12 2xl:pb-24`}
           initial={'hidden'} whileInView={'visible'} viewport={{ once: true, amount: 1 }} variants={animationTitle}
         >
           {props.title}
         </motion.h1>
+
         <div className='flex items-center justify-between gap-4 md:gap-0'>
           <motion.div
             className='w-[80%] md:w-[60%] 2xl:w-[50%]'
@@ -188,6 +192,7 @@ function InfoCard(props) {
             />
           </motion.div>
         </div>
+
       </motion.div>
     </motion.div>
   )

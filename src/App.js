@@ -1,7 +1,7 @@
 import { useState } from "react";
 import LogoCS from "./component/LogoCS";
 import Main from "./components/Main";
-import Skills from "./components/Skills";
+import Skills from "./component/Skills";
 import FramerMotionTest from "./FramerMotionTest";
 import Prova from './Prova';
 import Section from "./components/Section";
@@ -20,25 +20,8 @@ function App() {
   return (
     <>
       <div className="bg-zinc-800 text-white ">
-        {/*  <Prova /> */}
-        {/* <Prova /> */}
-     {/*    <LogoCS /> */}
-    
         <About />
-        
-        {/* <Layout>
-        
-                
-         <Carrer />
-         <Skills/>
-         <Footer/>          
-        </Layout> */}
-
-
-        {/* <LogoCS /> */}
-        {/* <Main /> */}
-        {/* <FramerMotionTest /> */}
-
+        <Skills />
       </div>
     </>
 
