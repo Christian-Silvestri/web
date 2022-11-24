@@ -129,7 +129,7 @@ function SkillsButton() {
     const animationButton = {
       hidden: {
         opacity: 1,
-        x: -400
+        x: -200
       },
       visible: {
         opacity: 1,
