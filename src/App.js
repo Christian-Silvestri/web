@@ -8,6 +8,7 @@ import Section from "./components/Section";
 import Footer from './components/Footer';
 import Carrer from "./components/Carrer";
 import About from "./component/About";
+import Contact from "./component/Contact";
 
 
 const { Layout } = Section();
@@ -22,6 +23,7 @@ function App() {
       <div className="bg-zinc-800 text-white ">
         <About />
         <Skills />
+        <Contact />
       </div>
     </>
 

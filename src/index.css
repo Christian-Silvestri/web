@@ -94,14 +94,27 @@ input::placeholder {
   font-weight: bold;
   opacity: .3;
   color: darkgray;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+
 }
 
 textarea::placeholder {
   font-weight: bold;
   opacity: 0.3;
   color: darkgray;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+
+input:focus {
+  outline: none;
+  border-color: rgb(244 63 94);
+  box-shadow: 0 0 10px rgb(244 63 94);
+}
+
+textarea:focus {
+  outline: none;
+  border-color: rgb(244 63 94);
+  box-shadow: 0 0 10px rgb(244 63 94);
 }
 
 ::-webkit-scrollbar {
@@ -168,6 +181,13 @@ textarea::placeholder {
   border-left: 1px solid rgb(68, 68, 68);
 }
 
+.button-border-social {
+  box-shadow: inset 2px 2px 4px rgb(121, 120, 120);
+  border-top: inset 2px solid rgb(68, 68, 68);
+  border-left: inset 2px solid rgb(68, 68, 68);
+
+}
+
 .card-content {
   position: relative;
   height: auto;
@@ -196,7 +216,7 @@ textarea::placeholder {
   -webkit-backface-visibility: hidden;
   transition: transform 0.5s;
 }
- 
+
 
 .card>.card-front {
   z-index: 10;

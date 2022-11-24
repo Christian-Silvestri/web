@@ -5,42 +5,32 @@ import Skillso from '../components/Skillso';
 import { motion } from 'framer-motion';
 import { BsCaretDown } from 'react-icons/bs';
 
+
+
+
 function Skills() {
 
-  const animationTitle = {
-    hidden: {
-      opacity: 0,
-      scaleY: 0
-    },
-    visible: {
-      opacity: 1,
-      scaleY: 1,
-      transition: {
-        duration: 0.2,
-        ease: 'easeInOut',
-        delay: 0.5
-      }
-    }
-  }
+
 
   return (
-    <div className='space-y-6 pt-48 md:pt-12 lg:pt-48 pb-4 lg:pb-12 2xl:pb-24 '>
-      <motion.h1 initial={'hidden'} whileInView={'visible'} viewport={{ once: true, amount: 1 }} variants={animationTitle} className='px-4  md:px-8 lg:pl-12 xl:pl-24 2xl:pl-48 lg:pb-8 2xl:pb-12 xl:hidden'>skills</motion.h1>
-      <h1 className='px-4  md:px-8 lg:pl-12 xl:pl-24 2xl:pl-48 lg:pb-8 2xl:pb-12 hidden xl:block'>skills</h1>
+    <div className='space-y-6 pt-48 md:pt-12 lg:pt-48 pb-4 lg:pb-12 2xl:pb-36 '>
+      <h1 className='px-4  md:px-8 lg:pl-12 xl:pl-24 2xl:pl-48 lg:pb-8  '>skills</h1>
       <div className='px-4 md:px-8 lg:px-12 xl:px-24 2xl:px-48'>
-
         <div className='hidden xl:flex flex-wrap justify-between '>
           <SkillsCard />
         </div>
         <div className='xl:hidden'>
           <SkillsButton />
         </div>
-
-
       </div>
     </div>
   )
 }
+
+
+
+
+
 
 
 
@@ -79,6 +69,8 @@ function SkillsCard() {
     )
   }
 
+
+
   return (
     icon.map((icon) => {
       return (
@@ -90,10 +82,18 @@ function SkillsCard() {
   )
 }
 
+
+
+
+
+
+
+
 function SkillsButton() {
 
 
   const Button = (props) => {
+
     const [show, setShow] = useState(false);
     const handleShow = () => setShow(!show);
 
@@ -126,38 +126,18 @@ function SkillsButton() {
       }
     }
 
-    const animationButton = {
-      hidden: {
-        opacity: 1,
-        x: -200
-      },
-      visible: {
-        opacity: 1,
-        x: 0,
-        transition: {
-          duration: 0.8,
-          ease: 'easeInOut'
-        }
-      }
-    }
+
 
     return (
       <motion.div
-      initial={'hidden'}
-      whileInView={'visible'}
-      variants={animationButton}
-      viewport={{once: true, }}
-        /* layout
-        transition={{ duration: 0.2 }} */
         onClick={handleShow}
         className={`${show && 'flex-col'} ${style.button} button-border px-4 py-2 w-full  cursor-default `}
       >
-
         <motion.div
-          /*  layout='position' */
           className={`${show && 'justify-between'} w-full h-full flex items-center `}
         >
-          <span className={`${style.icon.text} grow-[1]`} >
+          <span className={`${style.icon.text} grow-[1]`}
+          >
             {props.icon}
           </span>
           <span className={`${style.name.text} grow-[3] w-full `} >
@@ -167,21 +147,19 @@ function SkillsButton() {
             <BsCaretDown size={20} className={`${show && 'rotate-180'}`} />
           </span>
         </motion.div>
-
         <motion.span
-          layout='position'
+
           initial={'hidden'}
           whileInView={'visible'}
           exit={'initial'}
           transition={{ staggerChildren: 0.9 }}
           variants={animation}
-          className={`${show ? 'visible' : 'hidden'} ${style.content.text} h-full py-4 w-full`}
+          className={`${show ? 'visible' : 'hidden'} ${style.content.text} h-full pt-4  w-full flex items-center justify-center flex-col`}
         >
           {props.content}
           <br />
-          <div className={`${style.link} pt-2`}>{props.link}</div>
+          <div className={`${style.link}   `}>{props.link}</div>
         </motion.span>
-
       </motion.div>
     )
   }
