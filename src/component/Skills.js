@@ -128,7 +128,7 @@ function SkillsButton() {
 
     const animationButton = {
       hidden: {
-        opacity: 0,
+        opacity: 1,
         x: -400
       },
       visible: {
@@ -146,7 +146,7 @@ function SkillsButton() {
       initial={'hidden'}
       whileInView={'visible'}
       variants={animationButton}
-      viewport={{once: true}}
+      viewport={{once: true, }}
         /* layout
         transition={{ duration: 0.2 }} */
         onClick={handleShow}
