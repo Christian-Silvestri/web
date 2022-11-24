@@ -150,7 +150,7 @@ function InfoCard(props) {
   const style = {
     display: {
       screen: ' flex items-center justify-center h-screen landscape:h-full sm:landscape:h-full sm:portrait:h-screen lg:portrait:h-screen lg:landscape:h-screen ',
-      padding: ' px-4  md:px-8 lg:pl-12 xl:pl-48 2xl:pl-72 '
+      padding: ' px-4  md:px-8 lg:pl-12 xl:pl-24 2xl:pl-48 '
     },
   };
 
