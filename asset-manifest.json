@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.c744fa5c.css",
-    "main.js": "/web/static/js/main.5da51fee.js",
+    "main.css": "/web/static/css/main.203518f4.css",
+    "main.js": "/web/static/js/main.dbdcfa84.js",
     "static/media/Gugi-Regular.ttf": "/web/static/media/Gugi-Regular.e4e242ff3ba08f9fe398.ttf",
     "static/media/Bogart-Black-trial.ttf": "/web/static/media/Bogart-Black-trial.d446d8460c4f179a064e.ttf",
     "static/media/Exo2-VariableFont_wght.ttf": "/web/static/media/Exo2-VariableFont_wght.718ec91358aa7ee8083b.ttf",
@@ -13,6 +13,7 @@
     "static/media/BlueCobraExtraExpanded.otf": "/web/static/media/BlueCobraExtraExpanded.3162543443ad24e6eb40.otf",
     "static/media/CertificatoDevelhope2M.png": "/web/static/media/CertificatoDevelhope2M.ed152ecb445424202f00.png",
     "static/media/TuskerGrotesk-2600Semibold.ttf": "/web/static/media/TuskerGrotesk-2600Semibold.3fe78d062ec285995075.ttf",
+    "static/media/cs3.png": "/web/static/media/cs3.33b5a229cd3e881e4ae7.png",
     "static/media/Voltaire-Regular.ttf": "/web/static/media/Voltaire-Regular.d8c3d12bb6faae6ed4c9.ttf",
     "static/media/tr4.png": "/web/static/media/tr4.7ce1e5339a42ec1df606.png",
     "static/media/tr3.png": "/web/static/media/tr3.68d0782c66d30cd07356.png",
@@ -21,11 +22,11 @@
     "static/media/tr1.png": "/web/static/media/tr1.63c0c1874d1ebdedadf1.png",
     "static/media/vallauri2.png": "/web/static/media/vallauri2.03bbfd678324835dd40e.png",
     "index.html": "/web/index.html",
-    "main.c744fa5c.css.map": "/web/static/css/main.c744fa5c.css.map",
-    "main.5da51fee.js.map": "/web/static/js/main.5da51fee.js.map"
+    "main.203518f4.css.map": "/web/static/css/main.203518f4.css.map",
+    "main.dbdcfa84.js.map": "/web/static/js/main.dbdcfa84.js.map"
   },
   "entrypoints": [
-    "static/css/main.c744fa5c.css",
-    "static/js/main.5da51fee.js"
+    "static/css/main.203518f4.css",
+    "static/js/main.dbdcfa84.js"
   ]
 }
