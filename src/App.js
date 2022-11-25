@@ -14,73 +14,36 @@ import Loader from "./component/Loader";
 
 
 
-const { Layout } = Section();
-
 
 
 function App() {
 
   const [isLoading, setIsLoading] = useState(true);
 
-   useEffect(() => {
-     setIsLoading(true);
-     setTimeout(() => {
-       setIsLoading(false)
-     }, 5000)
-   }, [])
-
-  const animation = {
-    hidden: {
-      opacity: [0, 0.2, 0.5],
-      scaleY: 0,
-
-      
-    },
-    visible: {
-      opacity: 1,
-      scaleY: 1,
-
-      transition: {
-        duration: 0.5,
-        delay: 1
-
-      }
-    },
-    exit: {
-      opacity: 0,
-      scaleY: 0,
-      transition: {
-        duration: 0.5
-      }
-    }
-  }
+  useEffect(() => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 4000)
+  }, [])
 
 
   return (
     <>
       <div className="bg-zinc-800 text-white ">
-        <AnimatePresence>
-          {isLoading && (
 
-            <div className="flex items-end  justify-center h-screen">
-              <Loader />
-              <motion.h1 initial={'hidden'} animate={'visible'} variants={animation} exit={'exit'} key={1} className="text-white flex flex-col pb-24 xl:pb-12">
-                <span>
-                  hi, i'm
-                </span>
-                christian silvestri
-              </motion.h1>
-            </div>
+         {isLoading ?
+          <Loader />
+          :
 
-          )}
-        </AnimatePresence>
-        <>
-          <About />
-          <Skills />
-          <Contact />
-        </>
+          <>
+            <About />
+            <Skills />
+            <Contact />
+          </>
 
-
+        }
+       {/*  <Loader /> */}
 
       </div>
     </>
