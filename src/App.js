@@ -1,15 +1,10 @@
 import { useEffect, useState } from "react";
-import LogoCS from "./component/LogoCS";
-import Main from "./components/Main";
+
 import Skills from "./component/Skills";
-import FramerMotionTest from "./FramerMotionTest";
-import Prova from './Prova';
-import Section from "./components/Section";
-import Footer from './components/Footer';
-import Carrer from "./components/Carrer";
+
 import About from "./component/About";
 import Contact from "./component/Contact";
-import { AnimatePresence, motion } from "framer-motion";
+
 import Loader from "./component/Loader";
 
 
@@ -43,7 +38,7 @@ function App() {
           </>
 
         }
-       {/*  <Loader /> */}
+      
 
       </div>
     </>

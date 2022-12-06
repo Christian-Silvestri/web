@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import { FaSass } from 'react-icons/fa';
 import { icon } from '../api/db';
-import Skillso from '../components/Skillso';
 import { motion } from 'framer-motion';
 import { BsCaretDown } from 'react-icons/bs';
 

@@ -1,8 +1,8 @@
-import { useRef, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { useRef} from 'react';
+import { motion } from 'framer-motion';
 /* import { socialIcons } from '../api/db'; */
 import { GoLocation } from 'react-icons/go';
-import { BiMailSend } from 'react-icons/bi';
+
 import { SiMinutemailer } from 'react-icons/si';
 import avatar from '../assets/avatar.png';
 import emailjs from '@emailjs/browser';

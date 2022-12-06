@@ -23,55 +23,25 @@
   src: url('../public/font/tusker/TuskerGrotesk-2600Semibold.ttf');
 }
 
-@font-face {
-  font-family: 'SEAWAVE';
-  src: url('../public/font/new/seawave/NT\ SEAWAVE\ \(standart\)\ -\ PERSONAL\ USE.otf');
-}
 
-@font-face {
-  font-family: 'LOBSTER';
-  src: url('../public/font/Michroma-Regular.ttf');
-}
+
+
 
 @font-face {
   font-family: 'PARA';
   src: url('../public/font/Exo2-VariableFont_wght.ttf');
 }
 
-@font-face {
-  font-family: 'GUGI';
-  src: url('../public/font/Gugi-Regular.ttf');
-}
 
-@font-face {
-  font-family: 'CHISATO';
-  src: url('../public/font/new/ChisatoRegular.ttf');
-}
+
+
 
 @font-face {
   font-family: 'CAVIAR';
   src: url('../public/font/new/caviar/CaviarDreams.ttf');
 }
 
-@font-face {
-  font-family: 'NUGO';
-  src: url('../public/font/new/NugoSansLight.ttf');
-}
 
-@font-face {
-  font-family: 'VOLTAIRE';
-  src: url('../public/font/new/Voltaire-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'BLUCOBRA';
-  src: url('../public/font/blue_cobra/BlueCobraExtraExpanded.otf');
-}
-
-@font-face {
-  font-family: 'TEST';
-  src: url('../public/font/bogart/Bogart-Black-trial.ttf');
-}
 
 
 * {

@@ -13,6 +13,7 @@ import { VscMail } from 'react-icons/vsc';
 import { BsTelephone } from 'react-icons/bs';
 import { FiExternalLink } from 'react-icons/fi';
 import { DiPhotoshop } from 'react-icons/di';
+import { DiDart } from 'react-icons/di';
 
 
 
@@ -124,6 +125,30 @@ export const icon = [
       >
         <div className='hidden xl:block'>
           <SiTypescript size={35} />
+        </div>
+        read more
+      </a>
+  },
+  {
+    id: 6,
+    name: 'dart',
+    content: <span>Dart is a client-optimized language for developing fast apps on any platform. Its goal is to offer the most productive programming language 
+    for multi-platform development, paired with a flexible execution runtime platform for app frameworks.
+    Languages are defined by their technical envelope—the choices made during development that shape the capabilities and strengths of a language. Dart is designed 
+    for a technical envelope that is particularly suited to client development, prioritizing both development (sub-second stateful hot reload) and high-quality production experiences across a wide variety of compilation targets (web, mobile, and desktop).
+    Dart also forms the foundation of Flutter. Dart provides the language and runtimes that power Flutter apps, but Dart also supports many core developer tasks 
+    like formatting, analyzing, and testing code.</span>,
+    iconXl: <DiDart size={100} />,
+    iconXs: <DiDart size={35} />,
+    link:
+      <a
+        href='https://dart.dev/'
+        className='flex items-center justify-center gap-2'
+        target='_blanck'
+        alt='DART - Home Page'
+      >
+        <div className='hidden xl:block'>
+          <DiDart size={35} />
         </div>
         read more
       </a>
