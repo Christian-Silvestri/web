@@ -111,7 +111,7 @@ function InfoCard(props) {
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.8,
+        duration: 0.3,
         ease: 'linear',
         delay: 0.5
       }
@@ -141,7 +141,7 @@ function InfoCard(props) {
     visible: {
       rotate: 360,
       transition: {
-        duration: 1,
+        duration: 0.5,
         ease: 'easeInOut'
       }
     }
