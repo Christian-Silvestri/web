@@ -1,32 +1,22 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.203518f4.css",
-    "main.js": "/web/static/js/main.dbdcfa84.js",
-    "static/media/Gugi-Regular.ttf": "/web/static/media/Gugi-Regular.e4e242ff3ba08f9fe398.ttf",
-    "static/media/Bogart-Black-trial.ttf": "/web/static/media/Bogart-Black-trial.d446d8460c4f179a064e.ttf",
+    "main.css": "/web/static/css/main.a374eb26.css",
+    "main.js": "/web/static/js/main.30d78e2c.js",
     "static/media/Exo2-VariableFont_wght.ttf": "/web/static/media/Exo2-VariableFont_wght.718ec91358aa7ee8083b.ttf",
-    "static/media/NT SEAWAVE (standart) - PERSONAL USE.otf": "/web/static/media/NT SEAWAVE (standart) - PERSONAL USE.899a89b1a43e60725146.otf",
-    "static/media/ChisatoRegular.ttf": "/web/static/media/ChisatoRegular.fefefae2bd7937433311.ttf",
     "static/media/avatar.png": "/web/static/media/avatar.fbc25b2372be8184f481.png",
     "static/media/CaviarDreams.ttf": "/web/static/media/CaviarDreams.174b0a13f7e49c169450.ttf",
-    "static/media/Michroma-Regular.ttf": "/web/static/media/Michroma-Regular.d2ad050949cf83809690.ttf",
-    "static/media/BlueCobraExtraExpanded.otf": "/web/static/media/BlueCobraExtraExpanded.3162543443ad24e6eb40.otf",
-    "static/media/CertificatoDevelhope2M.png": "/web/static/media/CertificatoDevelhope2M.ed152ecb445424202f00.png",
     "static/media/TuskerGrotesk-2600Semibold.ttf": "/web/static/media/TuskerGrotesk-2600Semibold.3fe78d062ec285995075.ttf",
     "static/media/cs3.png": "/web/static/media/cs3.33b5a229cd3e881e4ae7.png",
-    "static/media/Voltaire-Regular.ttf": "/web/static/media/Voltaire-Regular.d8c3d12bb6faae6ed4c9.ttf",
     "static/media/tr4.png": "/web/static/media/tr4.7ce1e5339a42ec1df606.png",
     "static/media/tr3.png": "/web/static/media/tr3.68d0782c66d30cd07356.png",
-    "static/media/NugoSansLight.ttf": "/web/static/media/NugoSansLight.f2194ac21fb64f3ceeb9.ttf",
     "static/media/tr2.png": "/web/static/media/tr2.fb91665d47b450b71e97.png",
     "static/media/tr1.png": "/web/static/media/tr1.63c0c1874d1ebdedadf1.png",
-    "static/media/vallauri2.png": "/web/static/media/vallauri2.03bbfd678324835dd40e.png",
     "index.html": "/web/index.html",
-    "main.203518f4.css.map": "/web/static/css/main.203518f4.css.map",
-    "main.dbdcfa84.js.map": "/web/static/js/main.dbdcfa84.js.map"
+    "main.a374eb26.css.map": "/web/static/css/main.a374eb26.css.map",
+    "main.30d78e2c.js.map": "/web/static/js/main.30d78e2c.js.map"
   },
   "entrypoints": [
-    "static/css/main.203518f4.css",
-    "static/js/main.dbdcfa84.js"
+    "static/css/main.a374eb26.css",
+    "static/js/main.30d78e2c.js"
   ]
 }
